@@ -304,16 +304,22 @@ ul {
 
 /* App windows */
 .appWindow {
-  width: 70vw;
+  width: 80vw;
   height: 80vh;
-  background-color: white;
+  background: linear-gradient(
+    to bottom,
+    hsl(214, 89%, 42%) 1px,
+    hsl(214, 89%, 70%) 2px 3px,
+    hsl(213, 79%, 42%) 5px,
+    white 5px
+  );
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  border: 3px solid hsl(214, 89%, 42%);
+  border: 2px solid hsla(214, 89%, 42%);
   border-top: none;
   position: absolute;
   top: 10vh;
-  left: 20vw;
+  left: 5vw;
   resize: both;
   overflow: hidden;
   min-width: 300px;
@@ -331,9 +337,7 @@ ul {
 .appWindow header {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  width: calc(100% + px);
-  margin-left: -1px;
-  margin-top: -1px;
+  width: calc(100% + 2px);
   box-shadow: inset -2px -2px 3px #0005;
   display: flex;
   align-items: center;
@@ -419,7 +423,7 @@ ul {
 
 .fileExpAddressBar {
   border-top: 1px solid #fff6;
-  background-color: #f0efe6;
+  background: linear-gradient(to top, #ddd, #f0efe6 3px);
   display: flex;
   font-size: 0.7rem;
   align-items: center;
@@ -440,4 +444,71 @@ ul {
   background-color: white;
   height: 1.75em;
   padding: 0.1em 0.25em;
+}
+
+.verticalseparator {
+  width: 1px;
+  align-self: stretch;
+  margin: 0 .5em;
+  background-color: #ccc;
+}
+
+/* App window content */
+.appWindowContent {
+  display: flex;
+  height: 100%;
+}
+
+.appWindowContent .sidebar {
+  background-color: #7190e0;
+  width: 200px;
+  font-size: .7rem;
+  overflow: scroll;
+}
+
+.appWindowContent .sidebarBlock {
+  margin: 1em;
+  background-color: #d6dff7;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  overflow: hidden;
+}
+
+.appWindowContent .sidebarBlockHeader {
+  background: linear-gradient(to right, white, transparent);
+  padding: .5em 1.25em;
+  color: #215dc6;
+  font-weight: bold;
+}
+
+.appWindowContent .sidebarBlockItems {
+  padding: .5em 1.25em;
+  color: #3f73df;
+  border: 1px solid white;
+  border-top: none;
+}
+
+.sidebarBlockItems button {
+  margin: .5em 0;
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}
+
+.sidebarBlockItems button img {
+  height: 16px;
+  width: 16px;
+  align-self: flex-start;
+}
+
+.appWindowInside {
+  padding: .4em;
+  display: grid;
+  grid-auto-rows: 58px;
+}
+
+.folderItem {
+  display: flex;
+  align-items: center;
+  gap: .4em;
 }

@@ -41,7 +41,7 @@
         </button>
 
         <div class="appWindow">
-          <header>
+          <header class="appWindowHeader">
             <img src="./assets/icons/mydocuments.ico" alt="" />
             <p class="appTitle">My Documents</p>
             <div class="appWindowActions">
@@ -62,14 +62,72 @@
             <button><img src="./assets/icons/help.ico" alt="">Back</button>
             <button>Forward</button>
             <button>Prev Folder</button>
+            <div class="verticalseparator"></div>
             <button>Search</button>
             <button>Folders</button>
+            <div class="verticalseparator"></div>
             <button>Display</button>
           </div>
           <div class="fileExpAddressBar">
             <span>Address</span>
             <input type="text" class="fileExpAddressInput" />
             <button>Go</button>
+          </div>
+          <div class="appWindowContent">
+            <aside class="sidebar">
+              <div class="sidebarBlock">
+                <div class="sidebarBlockHeader">
+                  File and Folder Tasks
+                </div>
+                <div class="sidebarBlockItems">
+                  <button class="sidebarItem">
+                    <img src="./assets/icons/makenewfolder.ico" alt="">
+                    Make a new folder
+                  </button>
+                  <button class="sidebarItem">
+                    <img src="./assets/icons/makenewfolder.ico" alt="">
+                    Publish this folder to the Web
+                  </button>
+                  <button class="sidebarItem">
+                    <img src="./assets/icons/makenewfolder.ico" alt="">
+                    Share this folder
+                  </button>
+                </div>
+              </div>
+              <div class="sidebarBlock">
+                <div class="sidebarBlockHeader">
+                  Other places
+                </div>
+                <div class="sidebarBlockItems">
+                  <button class="sidebarItem">
+                    <img src="./assets/icons/makenewfolder.ico" alt="">
+                    Desktop
+                  </button>
+                  <button class="sidebarItem">
+                    <img src="./assets/icons/makenewfolder.ico" alt="">
+                    My Computer
+                  </button>
+                  <button class="sidebarItem">
+                    <img src="./assets/icons/makenewfolder.ico" alt="">
+                    My Network Places
+                  </button>
+                </div>
+              </div>
+            </aside>
+            <div class="appWindowInside">
+              <button class="folderItem">
+                <img src="./assets/icons/mymusic.ico" alt="" class="icon_regular">
+                My Music
+              </button>
+              <button class="folderItem">
+                <img src="./assets/icons/mypictures.ico" alt="" class="icon_regular">
+                My Pictures
+              </button>
+              <button class="folderItem">
+                <img src="./assets/icons/myvideos.ico" alt="" class="icon_regular">
+                My Videos
+              </button>
+            </div>
           </div>
         </div>
       </div>
