@@ -322,8 +322,8 @@ ul {
   left: 5vw;
   resize: both;
   overflow: hidden;
-  min-width: 300px;
-  min-height: 200px;
+  min-width: 350px;
+  min-height: 300px;
   transition: all 0.05s;
 }
 
@@ -416,6 +416,10 @@ ul {
   align-items: center;
 }
 
+.fileExpActions button + button {
+  margin-left: 1em;
+}
+
 .fileExpActions img {
   height: 32px;
   width: 32px;
@@ -464,6 +468,7 @@ ul {
   width: 200px;
   font-size: .7rem;
   overflow: scroll;
+  color: #215dc6;
 }
 
 .appWindowContent .sidebarBlock {
@@ -477,13 +482,11 @@ ul {
 .appWindowContent .sidebarBlockHeader {
   background: linear-gradient(to right, white, transparent);
   padding: .5em 1.25em;
-  color: #215dc6;
   font-weight: bold;
 }
 
 .appWindowContent .sidebarBlockItems {
   padding: .5em 1.25em;
-  color: #3f73df;
   border: 1px solid white;
   border-top: none;
 }
