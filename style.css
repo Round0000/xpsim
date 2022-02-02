@@ -21,8 +21,8 @@ body {
   height: 100vh;
   display: grid;
   grid-template-rows: 1fr auto;
-  background: url("https://images2.alphacoders.com/941/thumb-1920-941898.jpg")
-    no-repeat center center/cover;
+  background: url("./assets/images/wallpaper1.jpg") no-repeat center
+    center/cover;
   position: relative;
 }
 
@@ -53,7 +53,13 @@ body {
 
 #startBtn {
   all: unset;
-  background-color: green;
+  background: linear-gradient(
+      to bottom,
+      hsl(120, 41%, 20%) 2%,
+      hsl(120, 41%, 80%) 8% 10%,
+      hsl(120, 41%, 49%) 20% 80%,
+      hsl(120, 41%, 29%)
+    );
   color: white;
   font-style: italic;
   font-size: 1.6rem;
@@ -61,10 +67,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-  box-shadow: 2px 2px 6px #0008;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  box-shadow: 2px 2px 6px #0008, inset -4px -2px 9px hsla(120, 41%, 20%, .8);
 }
+
 
 #startBtn img {
   width: 1em;
@@ -121,17 +128,17 @@ body {
 }
 
 #startMenu li span {
-    display: block;
-    color: #555;
-  }
+  display: block;
+  color: #555;
+}
 
 #startMenu li:hover {
-    background-color: hsl(214, 89%, 42%);
-    color: white;
+  background-color: hsl(214, 89%, 42%);
+  color: white;
 }
 
 #startMenu li:hover span {
-    color: #fffd;
+  color: #fffd;
 }
 
 .icon_regular {
@@ -163,9 +170,8 @@ body {
 }
 
 #startMenuShortcutsL li:last-of-type img {
-    width: 24px;
-    height: 24px;
-    margin-left: .5em;
+  height: 110%;
+  margin-left: 0.4em;
 }
 
 #startMenuShortcutsR {
