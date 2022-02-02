@@ -11,3 +11,11 @@ document.addEventListener("click", (e) => {
     windows.classList.remove("bsod");
   }
 });
+
+// Minimize/Maximize/Close window
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("btnWindowMaximize")) {
+    e.target.closest(".appWindow").classList.toggle("maximized");
+  }
+});
