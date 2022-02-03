@@ -25,20 +25,24 @@ document.addEventListener("click", (e) => {
     e.target.closest(".appWindow").classList.toggle("maximized");
   }
   if (e.target.classList.contains("btnWindowClose")) {
-    e.target.closest(".appWindow").classList.add("dnone");
+    const app = e.target.closest(".appWindow");
+    app.classList.add("dnone");
+    taskbar.querySelector(`.openedAppTab[data-app="${app.dataset.app}"]`).remove();
+    setActiveWindow(document.querySelector('.appWindow:last-of-type'));
   }
 });
 
 // Drag'n'drop
 
-const appWindow = document.querySelector(".appWindow");
-
 let dragged = false;
+let currentlyDragged;
 
 document.addEventListener("mousedown", (e) => {
   if (!e.target.classList.contains("appWindowHeader")) return;
 
+  setActiveWindow(e.target.closest(".appWindow"));
   dragged = true;
+  currentlyDragged = e.target.closest(".appWindow");
 });
 
 document.addEventListener("mouseup", (e) => {
@@ -48,9 +52,8 @@ document.addEventListener("mouseup", (e) => {
 document.addEventListener("mousemove", (e) => {
   if (!dragged) return;
 
-  console.log(e)
 
-  dragndrop(appWindow, e);
+  dragndrop(currentlyDragged, e);
 });
 
 function dragndrop(el, e) {
@@ -97,7 +100,34 @@ document.addEventListener("dblclick", e => {
   if (e.target.parentElement.classList.contains('appIcon')) {
     const targetApp = document.querySelector(`.appWindow[data-app=${e.target.parentElement.dataset.app}]`);
     targetApp.classList.remove("dnone");
-    
-    if ()
+
+    setActiveWindow(targetApp);
   }
+})
+
+// Switch active window
+document.querySelectorAll('.appWindow').forEach(app => {
+  app.addEventListener('click', e => {
+    setActiveWindow(app);
+  })
+})
+
+function setActiveWindow(el) {
+  if (document.querySelector('.activeWindow')) {
+    document.querySelector('.activeWindow').classList.remove('activeWindow');
+  }
+
+  el.classList.add('activeWindow');
+
+  if (taskbar.querySelector(".openedAppTab.active")) {
+    taskbar.querySelector(".openedAppTab.active").classList.remove('active');
+  }
+  taskbar.querySelector(`.openedAppTab[data-app="${el.dataset.app}"]`).classList.add('active');
+}
+
+// Taskbar shortcuts
+document.querySelector('.scutDesktop').addEventListener("click", e => {
+  document.querySelectorAll('.appWindow').forEach(app => {
+    app.classList.add('dnone');
+  })
 })

@@ -29,6 +29,12 @@ ul {
   list-style: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 #windows {
   width: 100vw;
   height: 100vh;
@@ -97,6 +103,60 @@ ul {
   margin: 0 0.5em 0 0.25em;
   text-shadow: 1px 2px 3px #000a;
 }
+
+#taskbarShortcuts {
+  display: flex;
+  align-items: center;
+  padding: .1em 1em;
+  margin-top: 4px;
+}
+
+#taskbarShortcuts button:hover {
+  outline: 2px solid #fff3;
+  border-radius: 3px;
+  background-color: #fff3;
+}
+
+#taskbarShortcuts button img {
+  display: block;
+  height: 20px;
+  width: 20px;
+  filter: drop-shadow(2px 2px 2px #0008);
+  pointer-events: none;
+}
+
+#openedApps {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.openedAppTab {
+  display: flex;
+  gap: .25em;
+  color: white;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  height: 80%;
+  margin-top: 4px;
+  padding: 0 1em;
+  flex-basis: 14em;
+  box-shadow: inset 1px 2px 3px #fff4;
+  background-color: #fff2;
+}
+
+.openedAppTab.active {
+  box-shadow: inset 1px 1px 2px #0008;
+  background-color: #0003;
+  border-color: #0005;
+}
+
+.openedAppTab img {
+  height: 20px;
+  width: 20px;
+}
+
 
 #startMenu {
   position: absolute;
@@ -364,10 +424,15 @@ ul {
   user-select: none;
 }
 
+.appWindow header p {
+  pointer-events: none;
+}
+
 .appWindow header img {
   height: 16px;
   width: 16px;
   margin-right: 0.2em;
+  pointer-events: none;
 }
 
 .appWindowActions {
