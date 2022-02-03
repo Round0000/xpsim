@@ -21,7 +21,7 @@
       <button id="bsodToggle" class="appIcon">
         <img src="./assets/icons/msn.ico" alt="" /><span>MSN Explorer</span>
       </button>
-      <button class="appIcon">
+      <button class="appIcon" data-app="notepad">
         <img src="./assets/icons/notepad.ico" alt="" /><span>Notepad</span>
       </button>
       <button class="appIcon">
@@ -33,6 +33,9 @@
       <button class="appIcon">
         <img src="./assets/icons/winmine.ico" alt="" /><span>Winmine</span>
       </button>
+      <button class="appIcon" data-app="explorer" data-apptitle="My Documents">
+        <img src="./assets/icons/mydocuments.ico" alt="" /><span>My Documents</span>
+      </button>
       <button class="appIcon">
         <img src="./assets/icons/folderclosed.ico" alt="" /><span>miscellaneous files</span>
       </button>
@@ -41,7 +44,7 @@
       </button>
 
       <!-- App window -->
-      <div class="appWindow">
+      <div class="appWindow dnone" data-app="explorer" data-apptitle="My Documents">
         <header class="appWindowHeader">
           <img src="./assets/icons/mydocuments.ico" alt="" />
           <p class="appTitle">My Documents</p>
@@ -145,7 +148,7 @@
         </div>
       </div>
 
-      <div class="appWindow">
+      <div class="appWindow dnone" data-app="notepad" data-apptitle="Notepad">
         <header class="appWindowHeader">
           <img src="./assets/icons/notepad.ico" alt="" />
           <p class="appTitle">Notepad</p>
@@ -221,7 +224,7 @@
           </div>
           <div id="startMenuShortcutsR">
             <ul>
-              <li>
+              <li data-app="notepad">
                 <img class="icon_small" src="./assets/icons/mydocuments.ico" alt="" />
                 <strong>My Documents</strong>
               </li>

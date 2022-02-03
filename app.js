@@ -24,6 +24,9 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("btnWindowMaximize")) {
     e.target.closest(".appWindow").classList.toggle("maximized");
   }
+  if (e.target.classList.contains("btnWindowClose")) {
+    e.target.closest(".appWindow").classList.add("dnone");
+  }
 });
 
 // Drag'n'drop
@@ -86,3 +89,15 @@ document.addEventListener("click", (e) => {
   contextualMenu.classList.add("dnone");
 
 });
+
+
+document.addEventListener("dblclick", e => {
+  console.log(e);
+
+  if (e.target.parentElement.classList.contains('appIcon')) {
+    const targetApp = document.querySelector(`.appWindow[data-app=${e.target.parentElement.dataset.app}]`);
+    targetApp.classList.remove("dnone");
+    
+    if ()
+  }
+})
