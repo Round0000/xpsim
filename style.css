@@ -32,6 +32,7 @@ ul {
   background: url("./assets/images/wallpaper1.jpg") no-repeat center
     center/cover;
   position: relative;
+  overflow: hidden;
 }
 
 #windows.bsod::before {
@@ -324,7 +325,6 @@ ul {
   overflow: hidden;
   min-width: 350px;
   min-height: 300px;
-  transition: all 0.05s;
 }
 
 .maximized {
@@ -514,4 +514,28 @@ ul {
   display: flex;
   align-items: center;
   gap: .4em;
+}
+
+/* Contextual menu */
+.contextualMenu {
+  position: fixed;
+  border: 1px solid #999;
+  background-color: white;
+  font-size: .7rem;
+  box-shadow: 2px 2px 3px #0008;
+  padding: 3px;
+  min-width: max-content;
+}
+
+.contextualMenu hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #ccc;
+  margin: .25em 0;
+}
+
+.contextualMenu li {
+  padding: .2em 1em;
+  padding-right: 2em;
 }
