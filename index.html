@@ -72,7 +72,8 @@
         <div class="fileExpAddressBar">
           <span>Address</span>
           <div class="fileExpAddressInput"><img src="./assets/icons/mydocuments.ico" alt="" />
-          <input type="text" value="My Documents"></div>
+            <input type="text" value="My Documents">
+          </div>
           <button>Go</button>
         </div>
         <div class="appWindowContent">
@@ -142,22 +143,27 @@
             </button>
           </div>
         </div>
-        <div id="contextualMenu" class="dnone">
-          <ul>
-            <li>View</li>
-            <hr>
-            <li>Arrange Icons By</li>
-            <li>Refresh</li>
-            <hr>
-            <li>Paste</li>
-            <li>Paste Shortcut</li>
-            <li>Open Command Prompt</li>
-            <hr>
-            <li>New</li>
-            <hr>
-            <li>Properties</li>
-          </ul>
-        </div>
+      </div>
+
+      <div class="appWindow">
+        <header class="appWindowHeader">
+          <img src="./assets/icons/notepad.ico" alt="" />
+          <p class="appTitle">Notepad</p>
+          <div class="appWindowActions">
+            <button class="btnWindowMinimize"></button>
+            <button class="btnWindowMaximize"></button>
+            <button class="btnWindowClose"></button>
+          </div>
+        </header>
+        <ul class="appMenu">
+          <li>File</li>
+          <li>Edit</li>
+          <li>View</li>
+          <li>Favorites</li>
+          <li>Tools</li>
+          <li>Help</li>
+        </ul>
+        <textarea class="notepadTextarea" spellcheck="false"></textarea>
       </div>
     </div>
 
@@ -271,6 +277,24 @@
           </button>
         </footer>
       </nav>
+    </div>
+
+    <!-- Contextual menu -->
+    <div id="contextualMenu" class="dnone">
+      <ul>
+        <li>View</li>
+        <hr>
+        <li>Arrange Icons By</li>
+        <li>Refresh</li>
+        <hr>
+        <li>Paste</li>
+        <li>Paste Shortcut</li>
+        <li>Open Command Prompt</li>
+        <hr>
+        <li>New</li>
+        <hr>
+        <li>Properties</li>
+      </ul>
     </div>
   </div>
 
