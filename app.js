@@ -1,3 +1,31 @@
+const appTemplate = `
+  <header class="appWindowHeader">
+    <img src="" alt="" />
+    <p class="appTitle"></p>
+    <div class="appWindowActions">
+      <button class="btnWindowMinimize"></button>
+      <button class="btnWindowMaximize"></button>
+      <button class="btnWindowClose"></button>
+    </div>
+  </header>
+  <ul class="appMenu dnone">
+  </ul>
+  <div class="appContent"></div>
+`;
+
+const apps = {
+  notepad: {
+    dataid: "notepad",
+    title: "Notepad",
+    menu: true,
+    menuItems: ["File", "Edit", "Format", "View", "Help"],
+    icon: "./assets/icons/notepad.ico",
+    html: `
+    <textarea class="notepadTextarea" spellcheck="false"></textarea>
+    `,
+  }
+}
+
 startBtn.addEventListener("click", () => {
   startMenu.classList.toggle("dnone");
 });
@@ -98,10 +126,7 @@ document.addEventListener("dblclick", e => {
   console.log(e);
 
   if (e.target.parentElement.classList.contains('appIcon')) {
-    const targetApp = document.querySelector(`.appWindow[data-app=${e.target.parentElement.dataset.app}]`);
-    targetApp.classList.remove("dnone");
-
-    setActiveWindow(targetApp);
+    openApp(e.target.parentElement.dataset.app);
   }
 })
 
@@ -122,7 +147,8 @@ function setActiveWindow(el) {
   if (taskbar.querySelector(".openedAppTab.active")) {
     taskbar.querySelector(".openedAppTab.active").classList.remove('active');
   }
-  taskbar.querySelector(`.openedAppTab[data-app="${el.dataset.app}"]`).classList.add('active');
+
+  taskbar.querySelector(`[data-app="${el.dataset.app}"]`).classList.add('active');
 }
 
 // Taskbar shortcuts
@@ -131,3 +157,36 @@ document.querySelector('.scutDesktop').addEventListener("click", e => {
     app.classList.add('dnone');
   })
 })
+
+function openApp(app) {
+  const a = apps[app];
+
+  const newApp = document.createElement('DIV');
+  newApp.classList.add('appWindow');
+  newApp.dataset.app = a.dataid;
+  newApp.dataset.appTitle = a.title;
+  newApp.innerHTML = appTemplate;
+  newApp.querySelector('.appWindowHeader img').src = a.icon;
+  newApp.querySelector('.appTitle').innerText = a.title;
+  if (a.menu) {
+    const menu = newApp.querySelector('.appMenu');
+    a.menuItems.forEach(item => {
+      const li = document.createElement('LI');
+      li.innerText = item;
+      menu.append(li);
+      menu.classList.remove("dnone");
+    })
+  }
+
+  desktop.append(newApp);
+
+  
+  const newTab = document.createElement('BUTTON');
+  newTab.classList.add('openedAppTab');
+  newTab.dataset.app = a.dataid;
+  newTab.innerHTML = `<img src="${a.icon}"" alt="" />${a.title}`;
+  openedApps.append(newTab);
+  
+  setActiveWindow(newApp);
+}
+
