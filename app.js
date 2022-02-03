@@ -2,6 +2,12 @@ startBtn.addEventListener("click", () => {
   startMenu.classList.toggle("dnone");
 });
 
+document.addEventListener('click', e => {
+  if (e.target.closest('#startMenu') || e.target.closest('#startBtn')) return;
+
+  startMenu.classList.add('dnone');
+})
+
 bsodToggle.addEventListener("click", () => {
   windows.classList.add("bsod");
 });
@@ -39,6 +45,8 @@ document.addEventListener("mouseup", (e) => {
 document.addEventListener("mousemove", (e) => {
   if (!dragged) return;
 
+  console.log(e)
+
   dragndrop(appWindow, e);
 });
 
@@ -67,12 +75,7 @@ function dragndrop(el, e) {
 document.addEventListener("contextmenu", (e) => {
   e.preventDefault();
 
-  console.log(e);
 
-  console.log("%capp.js line:70 e.x", "color: #007acc;", e.x);
-
-  const contextualMenu =
-    e.target.parentElement.querySelector(".contextualMenu");
 
   contextualMenu.style.left = e.x + "px";
   contextualMenu.style.top = e.y + "px";
@@ -80,7 +83,6 @@ document.addEventListener("contextmenu", (e) => {
 });
 
 document.addEventListener("click", (e) => {
-  if (document.querySelector(".contextualMenu")) {
-    document.querySelector(".contextualMenu").classList.add("dnone");
-  }
+  contextualMenu.classList.add("dnone");
+
 });
