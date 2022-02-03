@@ -23,6 +23,99 @@ const apps = {
     html: `
     <textarea class="notepadTextarea" spellcheck="false"></textarea>
     `,
+  },
+  fileexplorer: {
+    dataid: "fileexplorer",
+    title: "File Explorer",
+    menu: true,
+    menuItems: ["File", "Edit", "View", "Favorites", "Tools", "Help"],
+    icon: "./assets/icons/fileexplorer.ico",
+    html: `
+    <div class="fileExpActions">
+    <button><img src="./assets/icons/help.ico" alt="">Back</button>
+    <button>Forward</button>
+    <button>Prev Folder</button>
+    <div class="verticalseparator"></div>
+    <button><img src="./assets/icons/search.ico" alt="">Search</button>
+    <button><img src="./assets/icons/folders.ico" alt="">Folders</button>
+    <div class="verticalseparator"></div>
+    <button><img src="./assets/icons/display.ico" alt="">Display</button>
+  </div>
+  <div class="fileExpAddressBar">
+    <span>Address</span>
+    <div class="fileExpAddressInput"><img src="./assets/icons/mydocuments.ico" alt="" />
+      <input type="text" value="My Documents">
+    </div>
+    <button>Go</button>
+  </div>
+  <div class="appWindowContent">
+    <aside class="sidebar">
+      <div class="sidebarBlock">
+        <div class="sidebarBlockHeader">
+          File and Folder Tasks
+        </div>
+        <div class="sidebarBlockItems">
+          <button class="sidebarItem">
+            <img src="./assets/icons/makenewfolder.ico" alt="">
+            Make a new folder
+          </button>
+          <button class="sidebarItem">
+            <img src="./assets/icons/makenewfolder.ico" alt="">
+            Publish this folder to the Web
+          </button>
+          <button class="sidebarItem">
+            <img src="./assets/icons/makenewfolder.ico" alt="">
+            Share this folder
+          </button>
+        </div>
+      </div>
+      <div class="sidebarBlock">
+        <div class="sidebarBlockHeader">
+          Other places
+        </div>
+        <div class="sidebarBlockItems">
+          <button class="sidebarItem">
+            <img src="./assets/icons/makenewfolder.ico" alt="">
+            Desktop
+          </button>
+          <button class="sidebarItem">
+            <img src="./assets/icons/makenewfolder.ico" alt="">
+            My Computer
+          </button>
+          <button class="sidebarItem">
+            <img src="./assets/icons/makenewfolder.ico" alt="">
+            My Network Places
+          </button>
+        </div>
+      </div>
+      <div class="sidebarBlock">
+        <div class="sidebarBlockHeader">
+          Details
+        </div>
+        <div class="sidebarBlockItems">
+          <div class="folderDetails">
+            <p>My Documents</p>
+            <p>System Folder</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <div class="appWindowInside">
+      <button class="folderItem">
+        <img src="./assets/icons/mymusic.ico" alt="" class="icon_regular">
+        My Music
+      </button>
+      <button class="folderItem">
+        <img src="./assets/icons/mypictures.ico" alt="" class="icon_regular">
+        My Pictures
+      </button>
+      <button class="folderItem">
+        <img src="./assets/icons/myvideos.ico" alt="" class="icon_regular">
+        My Videos
+      </button>
+    </div>
+  </div>
+    `,
   }
 }
 
@@ -56,7 +149,9 @@ document.addEventListener("click", (e) => {
     const app = e.target.closest(".appWindow");
     app.classList.add("dnone");
     taskbar.querySelector(`.openedAppTab[data-app="${app.dataset.app}"]`).remove();
-    setActiveWindow(document.querySelector('.appWindow:last-of-type'));
+    if (taskbar.querySelector('.openedAppTab')) {
+      setActiveWindow(document.querySelector('.appWindow:last-of-type'));
+    }
   }
 });
 
@@ -79,7 +174,7 @@ document.addEventListener("mouseup", (e) => {
 
 document.addEventListener("mousemove", (e) => {
   if (!dragged) return;
-
+  console.log(e);
 
   dragndrop(currentlyDragged, e);
 });
@@ -123,7 +218,7 @@ document.addEventListener("click", (e) => {
 
 
 document.addEventListener("dblclick", e => {
-  console.log(e);
+  
 
   if (e.target.parentElement.classList.contains('appIcon')) {
     openApp(e.target.parentElement.dataset.app);
@@ -177,6 +272,8 @@ function openApp(app) {
       menu.classList.remove("dnone");
     })
   }
+
+  newApp.querySelector('.appContent').innerHTML = a.html;
 
   desktop.append(newApp);
 

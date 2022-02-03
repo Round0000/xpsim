@@ -35,6 +35,10 @@ img {
   max-height: 100%;
 }
 
+*::-webkit-resizer {
+  display: none;
+}
+
 #windows {
   width: 100vw;
   height: 100vh;
@@ -176,6 +180,7 @@ img {
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
   box-shadow: 2px 2px 6px #0008, 3px 1px 5px #0005;
+  user-select: none;
 }
 
 #startMenu header {
@@ -357,6 +362,7 @@ img {
   grid-template-rows: repeat(auto-fill, 80px);
   gap: 32px;
   padding: 1em;
+  position: relative;
 }
 
 .appIcon {
@@ -403,8 +409,7 @@ img {
 }
 
 .appContent {
-  height: 100%;
-  width: 100%;
+  flex: 1;
 }
 
 .maximized {
@@ -484,7 +489,6 @@ img {
 }
 
 .appMenu li {
-  height: 100%;
   padding: 0.4em 0.8em 0.5em;
 }
 
@@ -589,6 +593,7 @@ img {
   background: linear-gradient(to right, white, transparent);
   padding: .5em 1.25em;
   font-weight: bold;
+  user-select: none;
 }
 
 .appWindowContent .sidebarBlockItems {
@@ -667,9 +672,13 @@ img {
 }
 
 /* Notepad app */
+.appWindow[data-app="notepad"] .appContent {
+  display: flex;
+}
+
 .notepadTextarea {
   all: unset;
-  width: 100%;
+  flex: 1;
   height: 100%;
   max-height: 100%;
   border: 1px solid hsl(214, 89%, 42%);
