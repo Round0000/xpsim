@@ -7,13 +7,18 @@
 }
 
 body {
-  font-family: Tahoma, sans-serif;
-  font-size: 0.8rem;
-  color: hsl(240, 70%, 20%);
+  font-family: "Tahoma", "Comic Sans MS";
+  font-size: 12px;
+  color: hsl(240, 40%, 10%);
 }
 
 .dnone {
   display: none !important;
+}
+
+.invisible {
+  opacity: 0 !important;
+  pointer-events: none;
 }
 
 .activeWindow {
@@ -92,10 +97,11 @@ img {
   align-items: center;
   border-top-right-radius: 14px;
   border-bottom-right-radius: 14px;
-  box-shadow: inset 1px 0 3px #0008, inset -4px -2px 9px hsla(120, 41%, 20%, 0.5),
+  box-shadow: inset 1px 0 3px #0008,
+    inset -4px -2px 9px hsla(120, 41%, 20%, 0.5),
     inset -6px 0 12px hsla(120, 41%, 20%, 0.6);
-    line-height: 1;
-    width: 4em;
+  line-height: 1;
+  width: 4em;
 }
 
 #startBtn img {
@@ -113,7 +119,7 @@ img {
 #taskbarShortcuts {
   display: flex;
   align-items: center;
-  padding: .1em 1em;
+  padding: 0.1em 1em;
   margin-top: 4px;
 }
 
@@ -143,7 +149,7 @@ img {
 
 .openedAppTab {
   display: flex;
-  gap: .25em;
+  gap: 0.25em;
   color: white;
   align-items: center;
   border: 1px solid transparent;
@@ -168,12 +174,10 @@ img {
   width: 20px;
 }
 
-
 #startMenu {
   position: absolute;
   z-index: 100;
   bottom: 97%;
-  width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -205,6 +209,7 @@ img {
   display: flex;
   flex-direction: column;
   flex: 1;
+  gap: 0.25em;
 }
 
 #startMenu li {
@@ -212,6 +217,7 @@ img {
   align-items: center;
   gap: 0.3em;
   padding: 0.25em;
+  padding-right: 1em;
 }
 
 #startMenu li span {
@@ -258,6 +264,10 @@ img {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+#startMenuShortcutsL li:last-of-type strong {
+  margin: 0;
 }
 
 #startMenuShortcutsL li:last-of-type img {
@@ -312,7 +322,6 @@ img {
   display: flex;
   flex: 1;
   background-color: snow;
-  flex: 1;
   position: relative;
   border: 2px solid #1e40afbb;
 }
@@ -406,10 +415,12 @@ img {
   min-height: 300px;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s, opacity 0.3s, top 0.3s;
 }
 
 .appContent {
   flex: 1;
+  border-top: 1px solid white;
 }
 
 .maximized {
@@ -417,6 +428,12 @@ img {
   width: 100% !important;
   top: 0 !important;
   left: 0 !important;
+}
+
+.minimized {
+  transform: scale(0.1) !important;
+  opacity: 0 !important;
+  top: 100% !important;
 }
 
 .appWindow header {
@@ -502,7 +519,7 @@ img {
   border-bottom: 1px solid #0001;
   background-color: #f0efe6;
   display: flex;
-  padding: 0.4em 0.6em;
+  padding: 0em 0.6em;
   font-size: 0.7rem;
 }
 
@@ -510,15 +527,25 @@ img {
   display: flex;
   gap: 0.5em;
   align-items: center;
+  padding: 0.4em 0.2em;
+  padding-right: 0.8em;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.fileExpActions button:hover {
+  border-color: #ccc;
+  background: linear-gradient(to bottom, white, #eee);
+  box-shadow: inset -1px -2px 2px #0002;
 }
 
 .fileExpActions button + button {
-  margin-left: 1em;
+  margin-left: 0.5em;
 }
 
 .fileExpActions img {
-  height: 32px;
-  width: 32px;
+  height: 26px;
+  width: 26px;
 }
 
 .fileExpAddressBar {
@@ -550,7 +577,7 @@ img {
 
 .fileExpAddressInput img {
   display: block;
-  margin-right: .25em;
+  margin-right: 0.25em;
   max-height: 100%;
   user-select: none;
 }
@@ -563,7 +590,7 @@ img {
 .verticalseparator {
   width: 1px;
   align-self: stretch;
-  margin: 0 .5em;
+  margin: 0 0.5em;
   background-color: #ccc;
 }
 
@@ -576,7 +603,7 @@ img {
 .appWindowContent .sidebar {
   background-color: #7190e0;
   width: 200px;
-  font-size: .7rem;
+  font-size: 0.7rem;
   overflow: scroll;
   color: #215dc6;
 }
@@ -591,22 +618,22 @@ img {
 
 .appWindowContent .sidebarBlockHeader {
   background: linear-gradient(to right, white, transparent);
-  padding: .5em 1.25em;
+  padding: 0.5em 1.25em;
   font-weight: bold;
   user-select: none;
 }
 
 .appWindowContent .sidebarBlockItems {
-  padding: .5em 1.25em;
+  padding: 0.5em 1.25em;
   border: 1px solid white;
   border-top: none;
 }
 
 .sidebarBlockItems button {
-  margin: .5em 0;
+  margin: 0.5em 0;
   display: flex;
   align-items: center;
-  gap: .5em;
+  gap: 0.5em;
 }
 
 .sidebarBlockItems button:hover {
@@ -620,7 +647,7 @@ img {
 }
 
 .appWindowInside {
-  padding: .4em;
+  padding: 0.4em;
   display: grid;
   grid-auto-rows: 58px;
 }
@@ -628,13 +655,13 @@ img {
 .folderItem {
   display: flex;
   align-items: center;
-  gap: .4em;
+  gap: 0.4em;
 }
 
 .folderDetails {
   color: #000;
-  padding-top: .5em;
-  padding-bottom: .5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .folderDetails p:first-of-type {
@@ -646,11 +673,13 @@ img {
   position: fixed;
   border: 1px solid #999;
   background-color: white;
-  font-size: .7rem;
+  font-size: 0.7rem;
   box-shadow: 2px 2px 3px #0008;
   padding: 3px;
   min-width: max-content;
   color: #111;
+  z-index: 100;
+  transition: opacity 0.3s;
 }
 
 #contextualMenu hr {
@@ -658,11 +687,11 @@ img {
   height: 1px;
   width: 100%;
   background-color: #ccc;
-  margin: .25em 0;
+  margin: 0.25em 0;
 }
 
 #contextualMenu li {
-  padding: .2em 1em;
+  padding: 0.2em 1em;
   padding-right: 2em;
 }
 
@@ -682,7 +711,117 @@ img {
   height: 100%;
   max-height: 100%;
   border: 1px solid hsl(214, 89%, 42%);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   padding: 2px;
   font-weight: bold;
+}
+
+/* Calculator app */
+
+#WORKSHOP {
+  position: fixed;
+  width: max-content;
+  height: max-content;
+
+  z-index: 999;
+  /* display: none; */
+}
+
+.appWindow[data-app="calculator"] {
+  width: max-content;
+  height: max-content;
+  min-width: max-content;
+  min-height: max-content;
+}
+
+.appWindow[data-app="calculator"] .appContent {
+  background-color: #f0efe6;
+  padding: 0.1em 0.8em;
+}
+
+.calc_result {
+  background-color: white;
+  border: 1px solid #222;
+  padding: 0.2em 0.5em 0.5em;
+  text-align: right;
+  cursor: text;
+}
+
+.calc_interface {
+  margin: 0.8em 0;
+  display: grid;
+  gap: 0.5em;
+  width: max-content;
+  grid-template-columns: repeat(2, auto);
+  color: blue;
+}
+
+.calc_empty {
+  border: 1px solid white;
+  border-top: 0;
+  border-left: 0;
+  width: 65%;
+  margin-left: 10%;
+  align-self: center;
+  height: 85%;
+  box-shadow: inset 1px 1px 2px #0008, inset -1px -1px 1px #fff;
+}
+
+.calc_interface button {
+  border: 1px solid #222;
+  padding: 0.3em 0.2em;
+  min-width: max-content;
+  background: radial-gradient(#fff, #eee);
+  border: 2px solid transparent;
+  outline: 1px solid hsl(214, 70%, 30%);
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  border-bottom: 2px solid #0001;
+}
+
+.calc_interface button:hover {
+  background: radial-gradient(#fff, #eee),
+    linear-gradient(to top, orange, rgba(255, 166, 0, 0.185));
+  background-clip: padding-box, border-box;
+  background-size: cover;
+  background-origin: border-box;
+}
+
+.calc_interface button:active {
+  background: #e0e0e0;
+  border-top-color: #ccc;
+  border-bottom-color: #eee;
+}
+
+.calc_topline {
+  grid-column: 2 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: inherit;
+  margin-bottom: 0.3em;
+  color: red;
+}
+
+.calc_topline button {
+  width: auto;
+}
+
+.calc_leftline {
+  display: grid;
+  gap: inherit;
+  margin-right: 0.5em;
+  color: red;
+}
+
+.calc_mainblock {
+  display: grid;
+  gap: inherit;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.calc_red {
+  color: red;
 }
