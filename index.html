@@ -12,46 +12,53 @@
     <div id="windows" class="">
       <div id="desktop">
         <button class="appIcon">
-          <img src="./assets/icons/mycomputer.ico" alt="" /><span
+          <div class="appIconImage">
+            <img src="./assets/icons/mycomputer.ico" alt="" />
+          </div><span
             >My Computer</span
           >
         </button>
-        <button class="appIcon">
-          <img src="./assets/icons/wmp.ico" alt="" /><span
+        <button class="appIcon scutIcon">
+          <div class="appIconImage"><img src="./assets/icons/wmp.ico" alt="" /></div><span
             >Windows Media Player</span
           >
         </button>
-        <button id="bsodToggle" class="appIcon">
-          <img src="./assets/icons/msn.ico" alt="" /><span>MSN Explorer</span>
+        <button id="bsodToggle" class="appIcon scutIcon">
+          <div class="appIconImage"><img src="./assets/icons/msn.ico" alt="" /></div><span>MSN Explorer</span>
         </button>
-        <button class="appIcon" data-app="notepad">
-          <img src="./assets/icons/notepad.ico" alt="" /><span>Notepad</span>
+        <button class="appIcon scutIcon" data-app="notepad">
+          <div class="appIconImage"><img src="./assets/icons/notepad.ico" alt="" /></div><span>Notepad</span>
         </button>
-        <button class="appIcon">
-          <img src="./assets/icons/mspaint.ico" alt="" /><span>Paint</span>
+        <button class="appIcon scutIcon" data-app="calculator">
+          <div class="appIconImage"><img src="./assets/icons/calculator.ico" alt="" /></div><span
+            >Calculator</span
+          >
         </button>
-        <button class="appIcon">
-          <img src="./assets/icons/pinball.ico" alt="" /><span>Pinball</span>
+        <button class="appIcon scutIcon">
+          <div class="appIconImage"><img src="./assets/icons/mspaint.ico" alt="" /></div><span>Paint</span>
         </button>
-        <button class="appIcon">
-          <img src="./assets/icons/winmine.ico" alt="" /><span>Winmine</span>
+        <button class="appIcon scutIcon">
+          <div class="appIconImage"><img src="./assets/icons/pinball.ico" alt="" /></div><span>Pinball</span>
+        </button>
+        <button class="appIcon scutIcon">
+          <div class="appIconImage"><img src="./assets/icons/winmine.ico" alt="" /></div><span>Winmine</span>
         </button>
         <button
           class="appIcon"
           data-app="fileexplorer"
           data-apptitle="My Documents"
         >
-          <img src="./assets/icons/mydocuments.ico" alt="" /><span
+          <div class="appIconImage"><img src="./assets/icons/mydocuments.ico" alt="" /></div><span
             >My Documents</span
           >
         </button>
         <button class="appIcon">
-          <img src="./assets/icons/folderclosed.ico" alt="" /><span
+          <div class="appIconImage"><img src="./assets/icons/folderclosed.ico" alt="" /></div><span
             >miscellaneous files</span
           >
         </button>
         <button class="appIcon">
-          <img src="./assets/icons/binempty.ico" alt="" /><span
+          <div class="appIconImage"><img src="./assets/icons/binempty.ico" alt="" /></div><span
             >Recycle Bin</span
           >
         </button>
@@ -82,75 +89,74 @@
         </div>
 
         <!--  -->
-      <!--  -->
-      <!-- UI WORKSHOP -->
-      <!--  -->
+        <!--  -->
+        <!-- UI WORKSHOP -->
+        <!--  -->
 
-      <div id="WORKSHOP">
-        <div class="appWindow" data-app="calculator">
-          <header class="appWindowHeader">
-            <img src="" alt="" />
-            <p class="appTitle">Calculator Plus</p>
-            <div class="appWindowActions">
-              <button class="btnWindowMinimize"></button>
-              <button class="btnWindowMaximize"></button>
-              <button class="btnWindowClose"></button>
-            </div>
-          </header>
-          <ul class="appMenu">
-            <li>Edit</li>
-            <li>View</li>
-            <li>Help</li>
-          </ul>
-          <div class="appContent">
-            <p class="calc_result">0.</p>
-            <div class="calc_interface">
-              <div class="calc_empty"></div>
-
-              <div class="calc_topline">
-                <button>Backspace</button>
-                <button>CE</button>
-                <button>C</button>
+        <div id="WORKSHOP">
+          <div class="appWindow" data-app="calculator">
+            <header class="appWindowHeader">
+              <img src="" alt="" />
+              <p class="appTitle">Calculator Plus</p>
+              <div class="appWindowActions">
+                <button class="btnWindowMinimize"></button>
+                <button class="btnWindowMaximize"></button>
+                <button class="btnWindowClose"></button>
               </div>
+            </header>
+            <ul class="appMenu">
+              <li>Edit</li>
+              <li>View</li>
+              <li>Help</li>
+            </ul>
+            <div class="appContent">
+              <p class="calc_result">0.</p>
+              <div class="calc_interface">
+                <div class="calc_empty"></div>
 
-              <div class="calc_leftline">
-                <button>MC</button>
-                <button>MR</button>
-                <button>MS</button>
-                <button>M+</button>
-              </div>
+                <div class="calc_topline">
+                  <button>Backspace</button>
+                  <button>CE</button>
+                  <button>C</button>
+                </div>
 
-              <div class="calc_mainblock">
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button class="calc_red">/</button>
-                <button>sqrt</button>
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button class="calc_red">*</button>
-                <button>%</button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button class="calc_red">-</button>
-                <button>1/x</button>
-                <button>0</button>
-                <button>+/-</button>
-                <button>.</button>
-                <button class="calc_red">+</button>
-                <button class="calc_red">=</button>
+                <div class="calc_leftline">
+                  <button>MC</button>
+                  <button>MR</button>
+                  <button>MS</button>
+                  <button>M+</button>
+                </div>
+
+                <div class="calc_mainblock">
+                  <button>7</button>
+                  <button>8</button>
+                  <button>9</button>
+                  <button class="calc_red">/</button>
+                  <button>sqrt</button>
+                  <button>4</button>
+                  <button>5</button>
+                  <button>6</button>
+                  <button class="calc_red">*</button>
+                  <button>%</button>
+                  <button>1</button>
+                  <button>2</button>
+                  <button>3</button>
+                  <button class="calc_red">-</button>
+                  <button>1/x</button>
+                  <button>0</button>
+                  <button>+/-</button>
+                  <button>.</button>
+                  <button class="calc_red">+</button>
+                  <button class="calc_red">=</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!--  -->
-      <!-- End of workshop -->
-      <!--  -->
-      
+        <!--  -->
+        <!-- End of workshop -->
+        <!--  -->
       </div>
 
       <!-- Taskbar -->
@@ -166,7 +172,7 @@
         </div>
         <div id="openedApps"></div>
         <div id="sideIcons">
-          <p id="time">8:50 PM</p>
+          <p id="time">00:00</p>
         </div>
         <nav id="startMenu" class="dnone">
           <header>
@@ -331,8 +337,6 @@
         </nav>
       </div>
 
-      
-
       <!-- Contextual menu -->
       <div id="contextualMenu" class="invisible">
         <ul>
@@ -352,6 +356,7 @@
       </div>
     </div>
 
+    <script src="templates.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
