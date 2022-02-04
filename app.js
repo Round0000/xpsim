@@ -117,7 +117,7 @@ document.addEventListener("dblclick", (e) => {
 // Switch active window
 document.querySelectorAll(".appWindow").forEach((app) => {
   app.addEventListener("click", (e) => {
-    setActiveWindow(app);
+    // setActiveWindow(app);
   });
 });
 
