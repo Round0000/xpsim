@@ -16,12 +16,27 @@ body {
   display: none !important;
 }
 
+.activeWindow {
+  z-index: 99 !important;
+}
+
 button {
   all: unset;
+  user-select: none;
 }
 
 ul {
   list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+*::-webkit-resizer {
+  display: none;
 }
 
 #windows {
@@ -71,14 +86,16 @@ ul {
   color: white;
   font-style: italic;
   font-size: 1.6rem;
-  padding: 0.25em 0.75em 0.25em 0.5em;
+  padding: 0.25em 0.5em 0.25em 0.2em;
   display: flex;
   justify-content: center;
   align-items: center;
   border-top-right-radius: 14px;
   border-bottom-right-radius: 14px;
-  box-shadow: 2px 2px 6px #0008, inset -4px -2px 9px hsla(120, 41%, 20%, 0.8),
+  box-shadow: inset 1px 0 3px #0008, inset -4px -2px 9px hsla(120, 41%, 20%, 0.5),
     inset -6px 0 12px hsla(120, 41%, 20%, 0.6);
+    line-height: 1;
+    width: 4em;
 }
 
 #startBtn img {
@@ -90,11 +107,71 @@ ul {
   display: block;
   font-size: 1.4rem;
   margin: 0 0.5em 0 0.25em;
-  text-shadow: 1px 2px 3px #000a;
+  text-shadow: 2px 2px 4px #000c;
 }
+
+#taskbarShortcuts {
+  display: flex;
+  align-items: center;
+  padding: .1em 1em;
+  margin-top: 4px;
+}
+
+#taskbarShortcuts button {
+  width: max-content;
+}
+
+#taskbarShortcuts button:hover {
+  outline: 2px solid #fff3;
+  border-radius: 3px;
+  background-color: #fff3;
+}
+
+#taskbarShortcuts button img {
+  display: block;
+  height: 20px;
+  width: 20px;
+  filter: drop-shadow(2px 2px 2px #0008);
+  pointer-events: none;
+}
+
+#openedApps {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.openedAppTab {
+  display: flex;
+  gap: .25em;
+  color: white;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  height: 80%;
+  margin-top: 4px;
+  padding: 0 1em;
+  flex-basis: 14em;
+  box-shadow: inset 1px 2px 3px #fff4;
+  background-color: #fff2;
+  min-width: max-content;
+}
+
+.openedAppTab.active {
+  box-shadow: inset 1px 1px 2px #0008;
+  background-color: #0003;
+  border-color: #0005;
+}
+
+.openedAppTab img {
+  height: 20px;
+  width: 20px;
+}
+
 
 #startMenu {
   position: absolute;
+  z-index: 100;
   bottom: 97%;
   width: 500px;
   display: flex;
@@ -103,6 +180,7 @@ ul {
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
   box-shadow: 2px 2px 6px #0008, 3px 1px 5px #0005;
+  user-select: none;
 }
 
 #startMenu header {
@@ -284,6 +362,7 @@ ul {
   grid-template-rows: repeat(auto-fill, 80px);
   gap: 32px;
   padding: 1em;
+  position: relative;
 }
 
 .appIcon {
@@ -325,12 +404,19 @@ ul {
   overflow: hidden;
   min-width: 350px;
   min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.appContent {
+  flex: 1;
 }
 
 .maximized {
   height: 100% !important;
   width: 100% !important;
-  inset: 0 !important;
+  top: 0 !important;
+  left: 0 !important;
 }
 
 .appWindow header {
@@ -352,12 +438,18 @@ ul {
   text-shadow: 1px 1px 3px #000a;
   height: 32px;
   padding: 4px 3px 0px;
+  user-select: none;
+}
+
+.appWindow header p {
+  pointer-events: none;
 }
 
 .appWindow header img {
   height: 16px;
   width: 16px;
   margin-right: 0.2em;
+  pointer-events: none;
 }
 
 .appWindowActions {
@@ -393,11 +485,16 @@ ul {
   margin-left: -1px;
   font-size: 0.7rem;
   border-bottom: 1px solid #0001;
+  user-select: none;
 }
 
 .appMenu li {
-  height: 100%;
   padding: 0.4em 0.8em 0.5em;
+}
+
+.appMenu li:hover {
+  background-color: hsl(214, 89%, 42%);
+  color: white;
 }
 
 .fileExpActions {
@@ -435,18 +532,32 @@ ul {
 
 .fileExpAddressBar span {
   color: #777;
+  user-select: none;
 }
 
 .fileExpAddressInput {
-  all: unset;
   flex: 1;
   margin-left: 0.5em;
   margin-right: 0.7em;
   line-height: 1;
   border: 1px solid #7f9db9;
   background-color: white;
-  height: 1.75em;
+  height: 2em;
   padding: 0.1em 0.25em;
+  display: flex;
+  align-items: center;
+}
+
+.fileExpAddressInput img {
+  display: block;
+  margin-right: .25em;
+  max-height: 100%;
+  user-select: none;
+}
+
+.fileExpAddressInput input {
+  all: unset;
+  flex: 1;
 }
 
 .verticalseparator {
@@ -482,6 +593,7 @@ ul {
   background: linear-gradient(to right, white, transparent);
   padding: .5em 1.25em;
   font-weight: bold;
+  user-select: none;
 }
 
 .appWindowContent .sidebarBlockItems {
@@ -495,6 +607,10 @@ ul {
   display: flex;
   align-items: center;
   gap: .5em;
+}
+
+.sidebarBlockItems button:hover {
+  cursor: pointer;
 }
 
 .sidebarBlockItems button img {
@@ -515,8 +631,18 @@ ul {
   gap: .4em;
 }
 
+.folderDetails {
+  color: #000;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+.folderDetails p:first-of-type {
+  font-weight: bold;
+}
+
 /* Contextual menu */
-.contextualMenu {
+#contextualMenu {
   position: fixed;
   border: 1px solid #999;
   background-color: white;
@@ -524,9 +650,10 @@ ul {
   box-shadow: 2px 2px 3px #0008;
   padding: 3px;
   min-width: max-content;
+  color: #111;
 }
 
-.contextualMenu hr {
+#contextualMenu hr {
   border: 0;
   height: 1px;
   width: 100%;
@@ -534,7 +661,28 @@ ul {
   margin: .25em 0;
 }
 
-.contextualMenu li {
+#contextualMenu li {
   padding: .2em 1em;
   padding-right: 2em;
+}
+
+#contextualMenu li:hover {
+  background-color: hsl(214, 89%, 42%);
+  color: white;
+}
+
+/* Notepad app */
+.appWindow[data-app="notepad"] .appContent {
+  display: flex;
+}
+
+.notepadTextarea {
+  all: unset;
+  flex: 1;
+  height: 100%;
+  max-height: 100%;
+  border: 1px solid hsl(214, 89%, 42%);
+  font-family: 'Courier New', Courier, monospace;
+  padding: 2px;
+  font-weight: bold;
 }
