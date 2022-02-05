@@ -75,7 +75,6 @@ document.addEventListener("mousemove", (e) => {
 });
 
 function dragndrop(el, e) {
-
   if (el.getBoundingClientRect().left <= 0) {
     el.style.left = "0";
   } else {
@@ -109,17 +108,13 @@ document.addEventListener("click", (e) => {
 });
 
 document.addEventListener("dblclick", (e) => {
-  if (e.target.parentElement.classList.contains("appIcon")) {
-    openApp(e.target.parentElement.dataset.app);
+  const t = e.target.parentElement;
+  if (t.classList.contains("appIcon")) {
+    openApp(t.dataset.app);
   }
 });
 
 // Switch active window
-document.querySelectorAll(".appWindow").forEach((app) => {
-  app.addEventListener("click", (e) => {
-    // setActiveWindow(app);
-  });
-});
 
 function setActiveWindow(el) {
   if (document.querySelector(".activeWindow")) {
@@ -153,7 +148,7 @@ function openApp(app) {
   newApp.dataset.appTitle = a.title;
   newApp.innerHTML = appTemplate;
   if (!a.maximize) {
-    newApp.querySelector('.btnWindowMaximize').disabled = true;
+    newApp.querySelector(".btnWindowMaximize").disabled = true;
   }
   newApp.querySelector(".appWindowHeader img").src = a.icon;
   newApp.querySelector(".appTitle").innerText = a.title;
@@ -170,6 +165,10 @@ function openApp(app) {
   newApp.querySelector(".appContent").innerHTML = a.html;
 
   desktop.append(newApp);
+
+  newApp.addEventListener("click", (e) => {
+    setActiveWindow(newApp);
+  });
 
   const newTab = document.createElement("BUTTON");
   newTab.classList.add("openedAppTab");
