@@ -703,6 +703,7 @@ img {
 
 .sidebarBlockItems button:hover {
   cursor: pointer;
+  color: hsl(218, 71%, 65%);
 }
 
 .sidebarBlockItems button img {
