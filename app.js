@@ -110,7 +110,7 @@ document.addEventListener("click", (e) => {
 document.addEventListener("dblclick", (e) => {
   const t = e.target.parentElement;
   if (t.classList.contains("appIcon")) {
-    openApp(t.dataset.app);
+    openApp(t.dataset.app, t.dataset.apptitle);
   }
 });
 
@@ -139,7 +139,7 @@ document.querySelector(".scutDesktop").addEventListener("click", (e) => {
   });
 });
 
-function openApp(app) {
+function openApp(app, title) {
   const a = apps[app];
 
   const newApp = document.createElement("DIV");
@@ -151,14 +151,33 @@ function openApp(app) {
     newApp.querySelector(".btnWindowMaximize").disabled = true;
   }
   newApp.querySelector(".appWindowHeader img").src = a.icon;
-  newApp.querySelector(".appTitle").innerText = a.title;
+  newApp.querySelector(".appTitle").innerText = title || a.title;
   if (a.menu) {
     const menu = newApp.querySelector(".appMenu");
     a.menuItems.forEach((item) => {
       const li = document.createElement("LI");
-      li.innerText = item;
+      li.innerText = item.name;
       menu.append(li);
       menu.classList.remove("dnone");
+
+      const submenu = document.createElement("UL");
+
+      submenu.classList.add("submenu");
+      li.append(submenu);
+
+      for (i = 0; i < item.submenu.length; i++) {
+        if (!item.submenu[i]) {
+          const hr = document.createElement("HR");
+          submenu.append(hr);
+        } else {
+          const lii = document.createElement("LI");
+          lii.innerText = item.submenu[i];
+          submenu.append(lii);
+        }
+
+
+        // console.log(item.submenu[i].indexOf(item.submenu[i][ii]));
+      }
     });
   }
 
@@ -205,4 +224,15 @@ setInterval(() => {
 //
 //
 //
-// openApp("calculator");
+openApp("notepad");
+
+// App Menu context
+document.addEventListener("click", (e) => {
+  if (e.target.parentElement.classList.contains("appMenu")) {
+    contextualMenu.style.left = e.target.getBoundingClientRect().left + "px";
+    contextualMenu.style.top = e.target.getBoundingClientRect().top + 24 + "px";
+    setTimeout(() => {
+      contextualMenu.classList.remove("invisible");
+    }, 100);
+  }
+});

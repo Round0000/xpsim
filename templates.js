@@ -18,7 +18,53 @@ const apps = {
     dataid: "notepad",
     title: "Notepad",
     menu: true,
-    menuItems: ["File", "Edit", "Format", "View", "Help"],
+    menuItems: [
+      {
+        name: "File",
+        submenu: [
+          "New",
+          "Open...",
+          "Save",
+          "Save As...",
+          "",
+          "Page Setup",
+          "Print...",
+          "",
+          "Exit",
+        ],
+      },
+      {
+        name: "Edit",
+        submenu: [
+          "Undo",
+          "",
+          "Cut",
+          "Copy",
+          "Paste",
+          "Delete",
+          "",
+          "Find",
+          "Find Next",
+          "Replace",
+          "Go To...",
+          "",
+          "Select All",
+          "Time/Date",
+        ],
+      },
+      {
+        name: "Format",
+        submenu: ["Word Wrap", "Font..."],
+      },
+      {
+        name: "View",
+        submenu: ["Status Bar"],
+      },
+      {
+        name: "Help",
+        submenu: ["Help Topics", "", "About Notepad"],
+      },
+    ],
     icon: "./assets/icons/notepad.ico",
     maximize: true,
     html: `
@@ -27,7 +73,7 @@ const apps = {
   },
   fileexplorer: {
     dataid: "fileexplorer",
-    title: "My Documents",
+    title: "File Explorer",
     menu: true,
     menuItems: ["File", "Edit", "View", "Favorites", "Tools", "Help"],
     icon: "./assets/icons/fileexplorer.ico",
@@ -123,7 +169,27 @@ const apps = {
     dataid: "calculator",
     title: "Calculator",
     menu: true,
-    menuItems: ["Edit", "View", "Help"],
+    menuItems: [
+      {
+        name: "Edit",
+        submenu: ["Copy", "Paste"],
+      },
+      {
+        name: "View",
+        submenu: [
+          "Standard",
+          "Scientific",
+          "Conversion",
+          "",
+          "Digit grouping",
+          "Classic View",
+        ],
+      },
+      {
+        name: "Help",
+        submenu: ["Help Topics", "", "About Calculator"],
+      },
+    ],
     icon: "./assets/icons/calculator.ico",
     maximize: false,
     html: `

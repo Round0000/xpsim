@@ -529,11 +529,45 @@ img {
 
 .appMenu li {
   padding: 0.4em 0.8em 0.5em;
+  position: relative;
 }
 
 .appMenu li:hover {
   background-color: hsl(214, 89%, 42%);
   color: white;
+}
+
+.appMenu .submenu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: var(--clr-menuGray);
+  display: none;
+  border: 1px solid #999;
+  background-color: white;
+  font-size: 0.7rem;
+  box-shadow: 2px 2px 3px #0008;
+  padding: 2px;
+  color: #111;
+  z-index: 100;
+  min-width: 10em;
+  width: max-content;
+}
+
+.appMenu .submenu li {
+  padding: .3em 1.5em;
+  
+}
+
+.appMenu .submenu hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  margin: 0.25em 0;
+}
+
+.appMenu li:hover .submenu {
+  display: block;
 }
 
 .fileExpActions {
@@ -705,10 +739,9 @@ img {
 }
 
 #contextualMenu hr {
-  border: 0;
-  height: 1px;
+  border: none;
+  border-top: 1px solid #ccc;
   width: 100%;
-  background-color: #ccc;
   margin: 0.25em 0;
 }
 
@@ -783,7 +816,7 @@ img {
   border: 1px solid #222;
   padding: 0.3em 0.2em;
   min-width: max-content;
-  background: radial-gradient(#fff, #eee);
+  background: linear-gradient(to bottom, #fff, #eee);
   border: 2px solid transparent;
   outline: 1px solid hsl(214, 70%, 30%);
   border-radius: 3px;
@@ -795,7 +828,7 @@ img {
 }
 
 .calc_interface button:hover {
-  background: radial-gradient(#fff, #eee),
+  background: linear-gradient(#fff, #eee),
     linear-gradient(to top, orange, rgba(255, 166, 0, 0.185));
   background-clip: padding-box, border-box;
   background-size: cover;
