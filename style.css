@@ -522,6 +522,10 @@ img {
   background: url("./assets/icons/windowmaximize.png") no-repeat center
     center/cover;
 }
+.btnWindowRestore {
+  background: url("./assets/icons/windowrestore.png") no-repeat center
+    center/cover;
+}
 .btnWindowClose {
   background: url("./assets/icons/windowclose.png") no-repeat center
     center/cover;
@@ -703,7 +707,8 @@ img {
 
 .sidebarBlockItems button:hover {
   cursor: pointer;
-  color: hsl(218, 71%, 65%);
+  color: hsl(218, 80%, 60%);
+  text-decoration: underline;
 }
 
 .sidebarBlockItems button img {
@@ -1105,4 +1110,127 @@ img {
 
   z-index: 999;
   /* display: none; */
+}
+
+
+/* Internet Explorer app */
+.appWindow[data-app="internetexplorer"] .appContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ie_topbar {
+  background-color: #f3f5f6;
+  padding: 3px;
+  border-bottom: 1px solid #333;
+}
+
+.ie_nav_buttons {
+  display: flex;
+}
+
+.ie_nav_buttons button {
+  width: 32px;
+  height: 32px;
+  background-size: 100% !important;
+}
+
+.ie_back:disabled {
+  background: url(./assets/icons/ie/navbuttons/b0.png);
+}
+.ie_back {
+  background: url(./assets/icons/ie/navbuttons/b1.png);
+}
+.ie_back:enabled:hover {
+  background: url(./assets/icons/ie/navbuttons/b2.png);
+}
+.ie_forward:disabled {
+  background: url(./assets/icons/ie/navbuttons/f0.png);
+}
+.ie_forward {
+  background: url(./assets/icons/ie/navbuttons/f1.png);
+}
+.ie_forward:enabled:hover {
+  background: url(./assets/icons/ie/navbuttons/f2.png);
+}
+
+.ie_frame {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.ie_frame iframe {  
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ie_noconnectpage {
+  padding: 2em;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.ie_noconnectpage img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  margin-right: 1em;
+}
+
+.ie_noconnectpage p {
+  grid-column: 2 / 3;
+  font-size: 1rem;
+  margin-top: .5em;
+  color: #447fd0;
+}
+
+.ie_noconnectpage hr {
+  grid-column:  2 / 3;
+  grid-row: 2 / 3;
+  height: 0;
+  width: 150%;
+  align-self: end;
+  border-color: transparent;
+  border-top-color: initial;
+}
+
+.ie_noconnectpage span {
+  grid-column: 2 / 3;
+  color: #575757;
+  margin: 1.5em 0 1em;
+}
+.ie_noconnectpage button {
+  grid-column: 2 / 3;
+  padding: 0.1em 0.6em;
+  background: linear-gradient(#fff, #eee),
+    linear-gradient(to top, hsl(214, 70%, 60%), hsla(214, 70%, 60%, .4));
+  background-clip: padding-box, border-box;
+  background-size: cover;
+  background-origin: border-box;
+  border: 2px solid transparent;
+  outline: 1px solid hsl(214, 70%, 30%);
+  border-radius: 3px;
+  border-bottom: 2px solid #0001;
+  width: max-content;
+  margin-bottom: 1.5em;
+}
+
+.ie_noconnectpage button:hover {
+  background: linear-gradient(#fff, #eee),
+    linear-gradient(to top, orange, rgba(255, 166, 0, 0.185));
+  background-clip: padding-box, border-box;
+  background-size: cover;
+  background-origin: border-box;
+}
+
+
+.ie_noconnectpage details {
+  grid-column: 2 / 3;
+  color: #3ab6ee;
 }

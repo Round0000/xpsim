@@ -5,6 +5,7 @@ const appTemplate = `
     <div class="appWindowActions">
       <button class="btnWindowMinimize"></button>
       <button class="btnWindowMaximize"></button>
+      <button class="btnWindowRestore dnone"></button>
       <button class="btnWindowClose"></button>
     </div>
   </header>

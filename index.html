@@ -82,68 +82,108 @@
           <span>Recycle Bin</span>
         </button>
 
-        
-
         <!--  -->
         <!--  -->
         <!-- UI WORKSHOP -->
         <!--  -->
 
-        <div id="WORKSHOP" class="dnone">
-          <div class="appWindow" data-app="wmp">
-            <header class="appWindowHeader">
-              <img src="./assets/icons/wmp.ico" alt="" />
-              <p class="appTitle">Windows Media Player</p>
-              <div class="appWindowActions">
-                <button class="btnWindowMinimize"></button>
-                <button class="btnWindowMaximize"></button>
-                <button class="btnWindowClose"></button>
-              </div>
-            </header>
-            <ul class="appMenu">
-              <li>File</li>
-              <li>View</li>
-              <li>Play</li>
-              <li>Tools</li>
-              <li>Help</li>
-            </ul>
-            <div class="appContent">
-              <!-- appContent start -->
+        <div class="appWindow" data-app="internetexplorer">
+          <header class="appWindowHeader">
+            <img src="./assets/icons/wmp.ico" alt="" />
+            <p class="appTitle">Internet Explorer</p>
+            <div class="appWindowActions">
+              <button class="btnWindowMinimize"></button>
+              <button class="btnWindowMaximize"></button>
+              <button class="btnWindowClose"></button>
+            </div>
+          </header>
 
-              <div class="wmp_topbar"></div>
-              <div class="wmp_viz">
-                <video id="wmpviz" src="./assets/video/wmpviz.mp4"></video>
+          <div class="appContent">
+            <div class="ie_topbar">
+              <div class="ie_topbar_a">
+                <div class="ie_nav_buttons">
+                  <button class="ie_back"></button>
+                  <button class="ie_forward"></button>
+                </div>
+                <div class="ie_urlbar"></div>
+                <button class="ie_refresh"></button>
+                <button class="ie_stop"></button>
+                <div class="ie_searchbar"></div>
+                <button class="ie_searchbutton"></button>
               </div>
-              <div class="wmp_bottombar"></div>
-              <div class="wmp_controls">
-                <div class="wmp_controls_progressbar"></div>
-                <button class="wmp_controls_play"><div></div></button>
-                <button class="wmp_controls_stop"><div></div></button>
-                <button class="wmp_controls_back" disabled>
-                  <span></span>
-                  <div></div>
-                </button>
-                <button class="wmp_controls_forward" disabled>
-                  <div></div>
-                  <span></span>
-                </button>
-                <button class="wmp_controls_mute">
-                  <div></div>
-                  <div><span></span><span></span><span></span></div>
-                </button>
-                <button class="wmp_controls_volume"></button>
+              <div class="ie_topbar_b">
+                <button class="ie_favs"></button>
+                <ul class="ie_tabs"></ul>
               </div>
-
-              <audio src="./assets/audio/gymnopedie.mp3"></audio>
-
-              <!-- appContent end -->
+            </div>
+            <div class="ie_frame">
+              <!-- <iframe src="https://rmdepts.netlify.app/" frameborder="0"></iframe> -->
+              <div class="ie_noconnectpage">
+                <img src="./assets/icons/ie/noConnect.png" alt="" />
+                <p>Internet Explorer cannot display the webpage</p>
+                <hr />
+                <span>What you can try:</span>
+                <button>Diagnose Connection Problems</button>
+                <details>
+                  <summary>More information</summary>
+                  gdhf
+                </details>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!--  -->
-        <!-- End of workshop -->
-        <!--  -->
+          <div id="WORKSHOP" class="dnone">
+            <div class="appWindow" data-app="wmp">
+              <header class="appWindowHeader">
+                <img src="./assets/icons/wmp.ico" alt="" />
+                <p class="appTitle">Windows Media Player</p>
+                <div class="appWindowActions">
+                  <button class="btnWindowMinimize"></button>
+                  <button class="btnWindowMaximize"></button>
+                  <button class="btnWindowClose"></button>
+                </div>
+              </header>
+              <ul class="appMenu">
+                <li>File</li>
+                <li>View</li>
+                <li>Play</li>
+                <li>Tools</li>
+                <li>Help</li>
+              </ul>
+              <div class="appContent">
+                <div class="wmp_topbar"></div>
+                <div class="wmp_viz">
+                  <video id="wmpviz" src="./assets/video/wmpviz.mp4"></video>
+                </div>
+                <div class="wmp_bottombar"></div>
+                <div class="wmp_controls">
+                  <div class="wmp_controls_progressbar"></div>
+                  <button class="wmp_controls_play"><div></div></button>
+                  <button class="wmp_controls_stop"><div></div></button>
+                  <button class="wmp_controls_back" disabled>
+                    <span></span>
+                    <div></div>
+                  </button>
+                  <button class="wmp_controls_forward" disabled>
+                    <div></div>
+                    <span></span>
+                  </button>
+                  <button class="wmp_controls_mute">
+                    <div></div>
+                    <div><span></span><span></span><span></span></div>
+                  </button>
+                  <button class="wmp_controls_volume"></button>
+                </div>
+
+                <audio src="./assets/audio/gymnopedie.mp3"></audio>
+              </div>
+            </div>
+          </div>
+
+          <!--  -->
+          <!-- End of workshop -->
+          <!--  -->
+        </div>
       </div>
 
       <!-- Taskbar -->
@@ -174,7 +214,7 @@
                 <li>
                   <img
                     class="icon_regular"
-                    src="https://img-19.ccm2.net/QLchrupHvsFu4Abzu3YRB-FG4Bs=/7998fca9298741c88b94e2e6092b7b6e/ccm-faq/3821-internet-explorer-7-logo-s-.png"
+                    src="./assets/icons/ie.ico"
                     alt=""
                   />
                   <div>

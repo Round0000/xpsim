@@ -21,8 +21,10 @@ document.addEventListener("click", (e) => {
 // Minimize/Maximize/Close window
 
 document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("btnWindowMaximize")) {
+  if (e.target.classList.contains("btnWindowMaximize") || e.target.classList.contains("btnWindowRestore")) {
     e.target.closest(".appWindow").classList.toggle("maximized");
+    e.target.parentElement.querySelector('.btnWindowMaximize').classList.toggle("dnone");
+    e.target.parentElement.querySelector('.btnWindowRestore').classList.toggle("dnone");
   }
   if (e.target.classList.contains("btnWindowClose")) {
     const app = e.target.closest(".appWindow");
@@ -223,7 +225,7 @@ setInterval(() => {
 //
 //
 //
-openApp("notepad");
+// openApp("notepad");
 
 // App Menu context
 
