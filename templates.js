@@ -75,7 +75,10 @@ const apps = {
     dataid: "fileexplorer",
     title: "File Explorer",
     menu: true,
-    menuItems: ["File", "Edit", "View", "Favorites", "Tools", "Help"],
+    menuItems: [{
+      name: "File",
+      submenu: ["Open Command Prompt", "", "New", "", "Create Shortcut", "Delete", "Rename", "Properties", "", "Close"],
+    },],
     icon: "./assets/icons/fileexplorer.ico",
     maximize: true,
     html: `

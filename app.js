@@ -150,7 +150,9 @@ function openApp(app, title) {
   if (!a.maximize) {
     newApp.querySelector(".btnWindowMaximize").disabled = true;
   }
-  newApp.querySelector(".appWindowHeader img").src = a.icon;
+  if (a.icon) {
+    newApp.querySelector(".appWindowHeader img").src = a.icon;
+  }
   newApp.querySelector(".appTitle").innerText = title || a.title;
   if (a.menu) {
     const menu = newApp.querySelector(".appMenu");
@@ -174,9 +176,6 @@ function openApp(app, title) {
           lii.innerText = item.submenu[i];
           submenu.append(lii);
         }
-
-
-        // console.log(item.submenu[i].indexOf(item.submenu[i][ii]));
       }
     });
   }
@@ -227,12 +226,4 @@ setInterval(() => {
 openApp("notepad");
 
 // App Menu context
-document.addEventListener("click", (e) => {
-  if (e.target.parentElement.classList.contains("appMenu")) {
-    contextualMenu.style.left = e.target.getBoundingClientRect().left + "px";
-    contextualMenu.style.top = e.target.getBoundingClientRect().top + 24 + "px";
-    setTimeout(() => {
-      contextualMenu.classList.remove("invisible");
-    }, 100);
-  }
-});
+

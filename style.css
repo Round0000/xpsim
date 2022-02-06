@@ -422,7 +422,7 @@ img {
   );
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  border: 2px solid hsla(214, 89%, 42%);
+  border: 2px solid hsla(214, 59%, 60%);
   border-top: none;
   position: absolute;
   top: 10vh;
@@ -474,6 +474,15 @@ img {
   height: 32px;
   padding: 4px 3px 0px;
   user-select: none;
+  filter: brightness(140%) contrast(70%);
+}
+
+.appWindow.activeWindow {
+  border-color: hsla(214, 89%, 42%);
+}
+
+.appWindow.activeWindow header {
+  filter: none;
 }
 
 .appWindow header p {
