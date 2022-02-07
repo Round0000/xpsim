@@ -1331,10 +1331,6 @@ img {
   margin-left: 4px;
 }
 
-.ie_refresh {
-  margin-left: 18px;
-}
-
 .ie_refresh img:last-of-type,
 .ie_stop img:last-of-type {
   display: none;
@@ -1426,15 +1422,19 @@ img {
   z-index: 10;
   margin-bottom: 3px;
   margin-left: -1px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
   user-select: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex: 1;
   max-width: 20em;
+}
+
+.ie_tabs li span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: max-content;
 }
 
 .ie_tabs .ie_tab_inactive {

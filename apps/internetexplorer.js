@@ -22,7 +22,7 @@ appW.addEventListener("click", (e) => {
       .querySelector(".ie_tab:not(.ie_tab_inactive)")
       .classList.add("ie_tab_inactive");
     newTab.classList.add("ie_tab");
-    newTab.innerHTML = `New Tab <button class="ie_closeTab">x</button>`;
+    newTab.innerHTML = `<span>New Tab</span> <button class="ie_closeTab">x</button>`;
     e.target.remove();
     appW.querySelector(".ie_tabs").append(newTab);
     const newTabTab = document.createElement("LI");
