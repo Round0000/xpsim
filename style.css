@@ -1258,6 +1258,11 @@ img {
   margin-bottom: 4em;
 }
 
+.ie_noconnectpage details img {
+  display: inline-block;
+  margin: 0;
+}
+
 .ie_noconnectpage summary::marker {
   color: transparent;
 }
@@ -1370,12 +1375,14 @@ img {
   align-items: center;
   position: relative;
   grid-template-columns: auto 1fr 1fr 1fr;
+  height: 36px;
+  padding-right: 6em;
 }
 
 .ie_favs {
-  margin-top: 3px;
   padding: 3px;
-  margin-bottom: 6px;
+  margin: 1px 4px 6px;
+  
 }
 .ie_favs img {
   height: 16px;
@@ -1390,9 +1397,9 @@ img {
   z-index: 2;
   margin-left: 1em;
   display: grid;
-  grid-template-columns: auto auto auto auto 1fr;
   justify-self: start;
   display: flex;
+  width: 100%;
 }
 
 .ie_tabs::before {
@@ -1415,11 +1422,9 @@ img {
   border-top-right-radius: 4px;
   border-bottom-color: #f2f6fb;
   box-shadow: inset 1px 1px 0 white, inset -1px 0 0 white, 0 1px 0 #f2f6fb;
-  grid-column: 1;
   z-index: 10;
   margin-bottom: 3px;
   margin-left: -1px;
-  flex: 1;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -1427,6 +1432,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex: 1;
 }
 
 .ie_tabs .ie_tab_inactive {
@@ -1437,7 +1443,7 @@ img {
   align-self: end;
   margin-bottom: 5px;
   z-index: 9;
-  padding-top: 6px;
+  padding-top: 7px;
   background: #e3eefb;
 }
 
@@ -1451,4 +1457,5 @@ img {
   color: #666;
   font-size: 1.4em;
   transform: translateY(-3px);
+  margin-left: 2em;
 }
