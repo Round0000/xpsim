@@ -1126,6 +1126,10 @@ img {
   border-bottom: 1px solid #333;
 }
 
+.ie_topbar > * {
+  display: flex;
+}
+
 .ie_nav_buttons {
   display: flex;
 }
@@ -1153,6 +1157,17 @@ img {
 }
 .ie_forward:enabled:hover {
   background: url(./assets/icons/ie/navbuttons/f2.png);
+}
+
+.ie_urlbar {
+  all: unset;
+  margin-left: .5em;
+  padding: .2em .5em;
+  border: 1px solid #7f9db9;
+  flex: 1;
+  height: 1.5em;
+  align-self: center;
+  background-color: white;
 }
 
 .ie_frame {
@@ -1229,8 +1244,46 @@ img {
   background-origin: border-box;
 }
 
-
 .ie_noconnectpage details {
   grid-column: 2 / 3;
   color: #3ab6ee;
+}
+
+.ie_refresh,
+.ie_stop {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  align-self: center;
+  margin-left: 4px;
+}
+
+.ie_refresh img:last-of-type,
+.ie_stop img:last-of-type {
+  display: none;
+}
+
+.ie_refresh:hover img:first-of-type,
+.ie_stop:hover img:first-of-type {
+  display: none;
+}
+.ie_refresh:hover img:last-of-type,
+.ie_stop:hover img:last-of-type {
+  display: block;
+}
+
+.ie_searchbar {
+  all: unset;
+  margin-left: .5em;
+  padding: .2em .5em;
+  border: 1px solid #7f9db9;
+  flex: 1;
+  height: 1.5em;
+  align-self: center;
+  background-color: white;
+  background-image: url(./assets/icons/ie/google.png);
+  background-repeat: no-repeat;
+  background-size: 14px;
+  background-position: 4px 42%;
+  padding-left: 24px;
 }
