@@ -569,7 +569,7 @@ img {
 
 .appMenu .submenu li {
   padding: .3em 1.5em;
-  
+
 }
 
 .appMenu .submenu hr {
@@ -1176,7 +1176,7 @@ img {
   width: 100%;
 }
 
-.ie_frame iframe {  
+.ie_frame iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -1190,6 +1190,7 @@ img {
   padding: 2em;
   display: grid;
   grid-template-columns: auto 1fr;
+  font-family: "Segoe UI", "Verdana", "Arial", sans-serif;
 }
 
 .ie_noconnectpage img {
@@ -1245,8 +1246,70 @@ img {
 }
 
 .ie_noconnectpage details {
+  display: block;
   grid-column: 2 / 3;
-  color: #3ab6ee;
+  color: rgb(19,112,171);
+
+
+}
+
+.ie_noconnectpage summary::marker {
+  color: transparent;
+}
+
+.ie_noconnectpage summary {
+  margin-left: -10px;
+  margin-bottom: 1em;
+  color: rgb(19,112,171);
+  font-size: .9rem;
+  display: flex;
+  align-items: center;
+  background: url("./assets/icons/ie/detailsarrow.png");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  padding-left: 24px;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+}
+
+.ie_noconnectpage summary:hover {
+  color: rgb(7,74,229);
+  text-decoration-color: currentColor;
+  cursor: pointer;
+}
+
+#ie_moreinformation {
+  display: none !important;
+  grid-column: 2 / 3;
+  color: #555;
+}
+
+#ie_moreinformation > * + * {
+  margin-bottom: .8em;
+}
+
+#ie_moreinformation p {
+  all: unset;
+  display: block;
+  margin-bottom: .8em;
+}
+
+#ie_moreinformation p + p {
+  margin: 0;
+}
+
+#ie_moreinformation ul {
+  list-style: initial;
+  padding-left: 3em;
+}
+
+#ie_moreinformation ol {
+  margin-top: 1em;
+  padding-left: 3em;
+}
+
+#ie_moreinformation:target {
+  display: block !important;
 }
 
 .ie_refresh,

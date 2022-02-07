@@ -1,396 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Windows XP</title>
-  </head>
 
-  <body>
-    <div id="windows" class="">
-      <div id="desktop">
-        <button class="appIcon">
-          <div class="appIconImage">
-            <img src="./assets/icons/mycomputer.ico" alt="" />
-          </div>
-          <span>My Computer</span>
-        </button>
-        <button class="appIcon scutIcon">
-          <div class="appIconImage">
-            <img src="./assets/icons/wmp.ico" alt="" />
-          </div>
-          <span>Windows Media Player</span>
-        </button>
-        <button class="appIcon scutIcon" data-app="internetexplorer">
-          <div class="appIconImage">
-            <img src="./assets/icons/ie.ico" alt="" />
-          </div>
-          <span>Internet Explorer</span>
-        </button>
-        <button id="bsodToggle" class="appIcon scutIcon">
-          <div class="appIconImage">
-            <img src="./assets/icons/msn.ico" alt="" />
-          </div>
-          <span>MSN Explorer</span>
-        </button>
-        <button class="appIcon scutIcon" data-app="notepad">
-          <div class="appIconImage">
-            <img src="./assets/icons/notepad.ico" alt="" />
-          </div>
-          <span>Notepad</span>
-        </button>
-        <button class="appIcon scutIcon" data-app="calculator">
-          <div class="appIconImage">
-            <img src="./assets/icons/calculator.ico" alt="" />
-          </div>
-          <span>Calculator</span>
-        </button>
-        <button class="appIcon scutIcon">
-          <div class="appIconImage">
-            <img src="./assets/icons/mspaint.ico" alt="" />
-          </div>
-          <span>Paint</span>
-        </button>
-        <button class="appIcon scutIcon">
-          <div class="appIconImage">
-            <img src="./assets/icons/pinball.ico" alt="" />
-          </div>
-          <span>Pinball</span>
-        </button>
-        <button class="appIcon scutIcon">
-          <div class="appIconImage">
-            <img src="./assets/icons/winmine.ico" alt="" />
-          </div>
-          <span>Winmine</span>
-        </button>
-        <button
-          class="appIcon"
-          data-app="fileexplorer"
-          data-apptitle="My Documents"
-        >
-          <div class="appIconImage">
-            <img src="./assets/icons/mydocuments.ico" alt="" />
-          </div>
-          <span>My Documents</span>
-        </button>
-        <button class="appIcon">
-          <div class="appIconImage">
-            <img src="./assets/icons/folderclosed.ico" alt="" />
-          </div>
-          <span>miscellaneous files</span>
-        </button>
-        <button class="appIcon">
-          <div class="appIconImage">
-            <img src="./assets/icons/binempty.ico" alt="" />
-          </div>
-          <span>Recycle Bin</span>
-        </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Windows XP</title>
+</head>
 
-        <!--  -->
-        <!--  -->
-        <!-- UI WORKSHOP -->
-        <!--  -->
+<body>
+  <div id="windows" class="">
+    <div id="desktop">
+      <button class="appIcon">
+        <div class="appIconImage">
+          <img src="./assets/icons/mycomputer.ico" alt="" />
+        </div>
+        <span>My Computer</span>
+      </button>
+      <button class="appIcon scutIcon">
+        <div class="appIconImage">
+          <img src="./assets/icons/wmp.ico" alt="" />
+        </div>
+        <span>Windows Media Player</span>
+      </button>
+      <button class="appIcon scutIcon" data-app="internetexplorer">
+        <div class="appIconImage">
+          <img src="./assets/icons/ie.ico" alt="" />
+        </div>
+        <span>Internet Explorer</span>
+      </button>
+      <button id="bsodToggle" class="appIcon scutIcon">
+        <div class="appIconImage">
+          <img src="./assets/icons/msn.ico" alt="" />
+        </div>
+        <span>MSN Explorer</span>
+      </button>
+      <button class="appIcon scutIcon" data-app="notepad">
+        <div class="appIconImage">
+          <img src="./assets/icons/notepad.ico" alt="" />
+        </div>
+        <span>Notepad</span>
+      </button>
+      <button class="appIcon scutIcon" data-app="calculator">
+        <div class="appIconImage">
+          <img src="./assets/icons/calculator.ico" alt="" />
+        </div>
+        <span>Calculator</span>
+      </button>
+      <button class="appIcon scutIcon">
+        <div class="appIconImage">
+          <img src="./assets/icons/mspaint.ico" alt="" />
+        </div>
+        <span>Paint</span>
+      </button>
+      <button class="appIcon scutIcon">
+        <div class="appIconImage">
+          <img src="./assets/icons/pinball.ico" alt="" />
+        </div>
+        <span>Pinball</span>
+      </button>
+      <button class="appIcon scutIcon">
+        <div class="appIconImage">
+          <img src="./assets/icons/winmine.ico" alt="" />
+        </div>
+        <span>Winmine</span>
+      </button>
+      <button class="appIcon" data-app="fileexplorer" data-apptitle="My Documents">
+        <div class="appIconImage">
+          <img src="./assets/icons/mydocuments.ico" alt="" />
+        </div>
+        <span>My Documents</span>
+      </button>
+      <button class="appIcon">
+        <div class="appIconImage">
+          <img src="./assets/icons/folderclosed.ico" alt="" />
+        </div>
+        <span>miscellaneous files</span>
+      </button>
+      <button class="appIcon">
+        <div class="appIconImage">
+          <img src="./assets/icons/binempty.ico" alt="" />
+        </div>
+        <span>Recycle Bin</span>
+      </button>
 
-        <div class="appWindow" data-app="internetexplorer">
-          <header class="appWindowHeader">
-            <img src="./assets/icons/wmp.ico" alt="" />
-            <p class="appTitle">Internet Explorer</p>
-            <div class="appWindowActions">
-              <button class="btnWindowMinimize"></button>
-              <button class="btnWindowMaximize"></button>
-              <button class="btnWindowClose"></button>
-            </div>
-          </header>
+      <!--  -->
+      <!--  -->
+      <!-- UI WORKSHOP -->
+      <!--  -->
 
-          <div class="appContent">
-            <div class="ie_topbar">
-              <div class="ie_topbar_a">
-                <div class="ie_nav_buttons">
-                  <button class="ie_back"></button>
-                  <button class="ie_forward"></button>
-                </div>
-                <input type="text" spellcheck="false" class="ie_urlbar" value="http://127.0.0.1:5500/index.html"></input>
-                <button class="ie_refresh"><img src="./assets/icons/ie/navbuttons/r1.png" alt=""><img src="./assets/icons/ie/navbuttons/r2.png" alt=""></button>
-                <button class="ie_stop"><img src="./assets/icons/ie/navbuttons/s1.png" alt=""><img src="./assets/icons/ie/navbuttons/s2.png" alt=""></button>
-                <input class="ie_searchbar"></input>
-                <button class="ie_searchbutton"></button>
+      <div class="appWindow" data-app="internetexplorer">
+        <header class="appWindowHeader">
+          <img src="./assets/icons/wmp.ico" alt="" />
+          <p class="appTitle">Internet Explorer</p>
+          <div class="appWindowActions">
+            <button class="btnWindowMinimize"></button>
+            <button class="btnWindowMaximize"></button>
+            <button class="btnWindowClose"></button>
+          </div>
+        </header>
+
+        <div class="appContent">
+          <div class="ie_topbar">
+            <div class="ie_topbar_a">
+              <div class="ie_nav_buttons">
+                <button class="ie_back"></button>
+                <button class="ie_forward"></button>
               </div>
-              <div class="ie_topbar_b">
-                <button class="ie_favs"></button>
-                <ul class="ie_tabs"></ul>
-              </div>
+              <input type="text" spellcheck="false" class="ie_urlbar" value="http://127.0.0.1:5500/index.html"></input>
+              <button class="ie_refresh"><img src="./assets/icons/ie/navbuttons/r1.png" alt=""><img
+                  src="./assets/icons/ie/navbuttons/r2.png" alt=""></button>
+              <button class="ie_stop"><img src="./assets/icons/ie/navbuttons/s1.png" alt=""><img
+                  src="./assets/icons/ie/navbuttons/s2.png" alt=""></button>
+              <input class="ie_searchbar"></input>
+              <button class="ie_searchbutton"></button>
             </div>
-            <div class="ie_frame">
-              <!-- <iframe src="https://rmdepts.netlify.app/" frameborder="0"></iframe> -->
-              <div class="ie_noconnectpage">
-                <img src="./assets/icons/ie/noConnect.png" alt="" />
-                <p>Internet Explorer cannot display the webpage</p>
-                <hr />
-                <span>What you can try:</span>
-                <button>Diagnose Connection Problems</button>
-                <details>
-                  <summary>More information</summary>
-                  gdhf
+            <div class="ie_topbar_b">
+              <button class="ie_favs"></button>
+              <ul class="ie_tabs"></ul>
+            </div>
+          </div>
+          <div class="ie_frame">
+            <!-- <iframe src="https://rmdepts.netlify.app/" frameborder="0"></iframe> -->
+            <div class="ie_noconnectpage">
+              <img src="./assets/icons/ie/noConnect.png" alt="" />
+              <p>Internet Explorer cannot display the webpage</p>
+              <hr />
+              <span>What you can try:</span>
+              <button>Diagnose Connection Problems</button>
+              <details id="ie_moreinformation"><summary>More information</summary>
+                  <p>This problem can be caused by a variety of issues, including: </p>
+                  <ul>
+                    <li>Internet connectivity has been lost.</li>
+                    <li>The website is temporarily unavailable.
+                    </li>
+                    <li>The Domain Name Server (DNS) is not reachable.
+                    </li>
+                    <li>The Domain Name Server (DNS) does not have a listing for the website's domain.
+                    </li>
+                    <li>There might be a typing error in the address.
+                    </li>
+                    <li>If this is an HTTPS (secure) address, click Tools, click Internet Options, click Advanced, and
+                      check to be sure the SSL and TLS protocols are enabled under the security section.
+                    </li>
+                  </ul>
+                  <p><strong>For offline users
+
+                  </strong></p>
+                  <p>You can still view subscribed feeds and some recently viewed webpages.
+                  </p>
+                  <p>To view subscribed feeds
+
+                  </p>
+                  <ol>
+                    <li>Click the Favorites Center button , click Feeds, and then click the feed you want to view.
+                    </li>
+                  </ol>
+                  <p>To view recently visited webpages (might not work on all pages)
+
+                  </p>
+                  <ol>
+                    <li>Click Tools , and then click Work Offline.
+                    </li>
+                    <li>Click the Favorites Center button , click History, and then click the page you want to view.
+                    </li>
+                  </ol>
                 </details>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div id="WORKSHOP" class="dnone">
+          <div class="appWindow" data-app="wmp">
+            <header class="appWindowHeader">
+              <img src="./assets/icons/wmp.ico" alt="" />
+              <p class="appTitle">Windows Media Player</p>
+              <div class="appWindowActions">
+                <button class="btnWindowMinimize"></button>
+                <button class="btnWindowMaximize"></button>
+                <button class="btnWindowClose"></button>
               </div>
-            </div>
-          </div>
-
-          <div id="WORKSHOP" class="dnone">
-            <div class="appWindow" data-app="wmp">
-              <header class="appWindowHeader">
-                <img src="./assets/icons/wmp.ico" alt="" />
-                <p class="appTitle">Windows Media Player</p>
-                <div class="appWindowActions">
-                  <button class="btnWindowMinimize"></button>
-                  <button class="btnWindowMaximize"></button>
-                  <button class="btnWindowClose"></button>
-                </div>
-              </header>
-              <ul class="appMenu">
-                <li>File</li>
-                <li>View</li>
-                <li>Play</li>
-                <li>Tools</li>
-                <li>Help</li>
-              </ul>
-              <div class="appContent">
-                <div class="wmp_topbar"></div>
-                <div class="wmp_viz">
-                  <video id="wmpviz" src="./assets/video/wmpviz.mp4"></video>
-                </div>
-                <div class="wmp_bottombar"></div>
-                <div class="wmp_controls">
-                  <div class="wmp_controls_progressbar"></div>
-                  <button class="wmp_controls_play"><div></div></button>
-                  <button class="wmp_controls_stop"><div></div></button>
-                  <button class="wmp_controls_back" disabled>
-                    <span></span>
-                    <div></div>
-                  </button>
-                  <button class="wmp_controls_forward" disabled>
-                    <div></div>
-                    <span></span>
-                  </button>
-                  <button class="wmp_controls_mute">
-                    <div></div>
-                    <div><span></span><span></span><span></span></div>
-                  </button>
-                  <button class="wmp_controls_volume"></button>
-                </div>
-
-                <audio src="./assets/audio/gymnopedie.mp3"></audio>
+            </header>
+            <ul class="appMenu">
+              <li>File</li>
+              <li>View</li>
+              <li>Play</li>
+              <li>Tools</li>
+              <li>Help</li>
+            </ul>
+            <div class="appContent">
+              <div class="wmp_topbar"></div>
+              <div class="wmp_viz">
+                <video id="wmpviz" src="./assets/video/wmpviz.mp4"></video>
               </div>
+              <div class="wmp_bottombar"></div>
+              <div class="wmp_controls">
+                <div class="wmp_controls_progressbar"></div>
+                <button class="wmp_controls_play">
+                  <div></div>
+                </button>
+                <button class="wmp_controls_stop">
+                  <div></div>
+                </button>
+                <button class="wmp_controls_back" disabled>
+                  <span></span>
+                  <div></div>
+                </button>
+                <button class="wmp_controls_forward" disabled>
+                  <div></div>
+                  <span></span>
+                </button>
+                <button class="wmp_controls_mute">
+                  <div></div>
+                  <div><span></span><span></span><span></span></div>
+                </button>
+                <button class="wmp_controls_volume"></button>
+              </div>
+
+              <audio src="./assets/audio/gymnopedie.mp3"></audio>
             </div>
           </div>
-
-          <!--  -->
-          <!-- End of workshop -->
-          <!--  -->
         </div>
-      </div>
 
-      <!-- Taskbar -->
-      <div id="taskbar">
-        <button id="startBtn">
-          <img src="./assets/images/windowslogo.png" alt="" />
-          <span>start</span>
-        </button>
-        <div id="taskbarShortcuts">
-          <button class="scutDesktop">
-            <img src="./assets/icons/desktop.ico" alt="" />
-          </button>
-        </div>
-        <div id="openedApps"></div>
-        <div id="sideIcons">
-          <p id="time">00:00</p>
-        </div>
-        <nav id="startMenu" class="dnone">
-          <header>
-            <div id="avatar">
-              <img src="./assets/images/avatar1.jpg" alt="" />
-            </div>
-            <p id="username">Lorem ipsum</p>
-          </header>
-          <div id="startMenuItems">
-            <div id="startMenuShortcutsL">
-              <ul>
-                <li>
-                  <img
-                    class="icon_regular"
-                    src="./assets/icons/ie.ico"
-                    alt=""
-                  />
-                  <div>
-                    <strong>Internet</strong><span>Internet Explorer</span>
-                  </div>
-                </li>
-                <li>
-                  <img
-                    class="icon_regular"
-                    src="./assets/icons/outlookexpress.png"
-                    alt=""
-                  />
-                  <div><strong>E-mail</strong><span>Outlook Express</span></div>
-                </li>
-                <hr />
-                <li>
-                  <img
-                    class="icon_regular"
-                    src="./assets/icons/wmp.ico"
-                    alt=""
-                  />
-                  Windows Media Player
-                </li>
-                <li>
-                  <img
-                    class="icon_regular"
-                    src="./assets/icons/mspaint.ico"
-                    alt=""
-                  />
-                  Paint
-                </li>
-                <li>
-                  <img
-                    class="icon_regular"
-                    src="https://auctioneertech.com/wp-content/uploads/2011/11/Windows_Easy_Transfer_Logo.png"
-                    alt=""
-                  />
-                  Files and Settings Transfer Wizard
-                </li>
-                <hr />
-                <li>
-                  <strong>All Programs</strong
-                  ><img src="./assets/icons/allprograms.png" alt="" />
-                </li>
-              </ul>
-            </div>
-            <div id="startMenuShortcutsR">
-              <ul>
-                <li data-app="notepad">
-                  <img
-                    class="icon_small"
-                    src="./assets/icons/mydocuments.ico"
-                    alt=""
-                  />
-                  <strong>My Documents</strong>
-                </li>
-                <li>
-                  <img
-                    class="icon_small"
-                    src="./assets/icons/myrecentdocuments.ico"
-                    alt=""
-                  /><strong>My Recent Documents</strong> ⯈
-                </li>
-                <li>
-                  <img
-                    class="icon_small"
-                    src="./assets/icons/mypictures.ico"
-                    alt=""
-                  />
-                  <strong>My Pictures</strong>
-                </li>
-                <li>
-                  <img
-                    class="icon_small"
-                    src="./assets/icons/mymusic.ico"
-                    alt=""
-                  />
-                  <strong>My Music</strong>
-                </li>
-                <li>
-                  <img
-                    class="icon_small"
-                    src="./assets/icons/mycomputer.ico"
-                    alt=""
-                  />
-                  <strong>My Computer</strong>
-                </li>
-                <hr />
-                <li>
-                  <img
-                    class="icon_small"
-                    src="./assets/icons/controlpanel.ico"
-                    alt=""
-                  />
-                  Control Panel
-                </li>
-                <li>
-                  <img
-                    class="icon_small"
-                    src="./assets/icons/mydocuments.ico"
-                    alt=""
-                  />Set Program Access and Defaults
-                </li>
-                <li>
-                  <img
-                    class="icon_small"
-                    src="./assets/icons/printersandfaxes.ico"
-                    alt=""
-                  />Printers and Faxes
-                </li>
-                <hr />
-                <li>
-                  <img
-                    class="icon_small"
-                    src="./assets/icons/help.ico"
-                    alt=""
-                  />
-                  Help and Support
-                </li>
-                <li>
-                  <img
-                    class="icon_small"
-                    src="./assets/icons/search.ico"
-                    alt=""
-                  />Search
-                </li>
-                <li>
-                  <img
-                    class="icon_small"
-                    src="./assets/icons/run.ico"
-                    alt=""
-                  />Run...
-                </li>
-              </ul>
-            </div>
-          </div>
-          <footer>
-            <button id="logOffBtn">
-              <img class="icon_small" src="./assets/icons/logoff.ico" alt="" />
-              Log Off
-            </button>
-            <button id="turnOffBtn">
-              <img class="icon_small" src="./assets/icons/turnoff.ico" alt="" />
-              Turn Off Computer
-            </button>
-          </footer>
-        </nav>
-      </div>
-
-      <!-- Contextual menu -->
-      <div id="contextualMenu" class="invisible">
-        <ul>
-          <li>View</li>
-          <hr />
-          <li>Arrange Icons By</li>
-          <li>Refresh</li>
-          <hr />
-          <li>Paste</li>
-          <li>Paste Shortcut</li>
-          <li>Open Command Prompt</li>
-          <hr />
-          <li>New</li>
-          <hr />
-          <li>Properties</li>
-        </ul>
+        <!--  -->
+        <!-- End of workshop -->
+        <!--  -->
       </div>
     </div>
 
-    <script src="templates.js"></script>
-    <script src="app.js"></script>
-    <script src="./apps/wmp.js"></script>
-  </body>
+    <!-- Taskbar -->
+    <div id="taskbar">
+      <button id="startBtn">
+        <img src="./assets/images/windowslogo.png" alt="" />
+        <span>start</span>
+      </button>
+      <div id="taskbarShortcuts">
+        <button class="scutDesktop">
+          <img src="./assets/icons/desktop.ico" alt="" />
+        </button>
+      </div>
+      <div id="openedApps"></div>
+      <div id="sideIcons">
+        <p id="time">00:00</p>
+      </div>
+      <nav id="startMenu" class="dnone">
+        <header>
+          <div id="avatar">
+            <img src="./assets/images/avatar1.jpg" alt="" />
+          </div>
+          <p id="username">Lorem ipsum</p>
+        </header>
+        <div id="startMenuItems">
+          <div id="startMenuShortcutsL">
+            <ul>
+              <li>
+                <img class="icon_regular" src="./assets/icons/ie.ico" alt="" />
+                <div>
+                  <strong>Internet</strong><span>Internet Explorer</span>
+                </div>
+              </li>
+              <li>
+                <img class="icon_regular" src="./assets/icons/outlookexpress.png" alt="" />
+                <div><strong>E-mail</strong><span>Outlook Express</span></div>
+              </li>
+              <hr />
+              <li>
+                <img class="icon_regular" src="./assets/icons/wmp.ico" alt="" />
+                Windows Media Player
+              </li>
+              <li>
+                <img class="icon_regular" src="./assets/icons/mspaint.ico" alt="" />
+                Paint
+              </li>
+              <li>
+                <img class="icon_regular"
+                  src="https://auctioneertech.com/wp-content/uploads/2011/11/Windows_Easy_Transfer_Logo.png" alt="" />
+                Files and Settings Transfer Wizard
+              </li>
+              <hr />
+              <li>
+                <strong>All Programs</strong><img src="./assets/icons/allprograms.png" alt="" />
+              </li>
+            </ul>
+          </div>
+          <div id="startMenuShortcutsR">
+            <ul>
+              <li data-app="notepad">
+                <img class="icon_small" src="./assets/icons/mydocuments.ico" alt="" />
+                <strong>My Documents</strong>
+              </li>
+              <li>
+                <img class="icon_small" src="./assets/icons/myrecentdocuments.ico" alt="" /><strong>My Recent
+                  Documents</strong> ⯈
+              </li>
+              <li>
+                <img class="icon_small" src="./assets/icons/mypictures.ico" alt="" />
+                <strong>My Pictures</strong>
+              </li>
+              <li>
+                <img class="icon_small" src="./assets/icons/mymusic.ico" alt="" />
+                <strong>My Music</strong>
+              </li>
+              <li>
+                <img class="icon_small" src="./assets/icons/mycomputer.ico" alt="" />
+                <strong>My Computer</strong>
+              </li>
+              <hr />
+              <li>
+                <img class="icon_small" src="./assets/icons/controlpanel.ico" alt="" />
+                Control Panel
+              </li>
+              <li>
+                <img class="icon_small" src="./assets/icons/mydocuments.ico" alt="" />Set Program Access and Defaults
+              </li>
+              <li>
+                <img class="icon_small" src="./assets/icons/printersandfaxes.ico" alt="" />Printers and Faxes
+              </li>
+              <hr />
+              <li>
+                <img class="icon_small" src="./assets/icons/help.ico" alt="" />
+                Help and Support
+              </li>
+              <li>
+                <img class="icon_small" src="./assets/icons/search.ico" alt="" />Search
+              </li>
+              <li>
+                <img class="icon_small" src="./assets/icons/run.ico" alt="" />Run...
+              </li>
+            </ul>
+          </div>
+        </div>
+        <footer>
+          <button id="logOffBtn">
+            <img class="icon_small" src="./assets/icons/logoff.ico" alt="" />
+            Log Off
+          </button>
+          <button id="turnOffBtn">
+            <img class="icon_small" src="./assets/icons/turnoff.ico" alt="" />
+            Turn Off Computer
+          </button>
+        </footer>
+      </nav>
+    </div>
+
+    <!-- Contextual menu -->
+    <div id="contextualMenu" class="invisible">
+      <ul>
+        <li>View</li>
+        <hr />
+        <li>Arrange Icons By</li>
+        <li>Refresh</li>
+        <hr />
+        <li>Paste</li>
+        <li>Paste Shortcut</li>
+        <li>Open Command Prompt</li>
+        <hr />
+        <li>New</li>
+        <hr />
+        <li>Properties</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="templates.js"></script>
+  <script src="app.js"></script>
+  <script src="./apps/wmp.js"></script>
+</body>
+
 </html>
