@@ -1174,6 +1174,8 @@ img {
   position: relative;
   height: 100%;
   width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .ie_frame iframe {
@@ -1249,7 +1251,7 @@ img {
   display: block;
   grid-column: 2 / 3;
   color: rgb(19,112,171);
-
+  margin-bottom: 4em;
 
 }
 
@@ -1279,7 +1281,6 @@ img {
 }
 
 #ie_moreinformation {
-  display: none !important;
   grid-column: 2 / 3;
   color: #555;
 }
