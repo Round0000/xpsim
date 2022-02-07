@@ -1178,6 +1178,7 @@ img {
   position: relative;
   height: 100%;
   width: 100%;
+  box-shadow: inset 1px -1px 1px #0005;
 }
 
 .ie_frame iframe {
@@ -1196,7 +1197,7 @@ img {
   grid-template-columns: auto 1fr;
   font-family: "Segoe UI", "Verdana", "Arial", sans-serif;
   overflow-x: hidden;
-  overflow-y: scroll;
+  
 }
 
 .ie_noconnectpage img {
@@ -1417,7 +1418,7 @@ img {
 .ie_tabs li {
   background: linear-gradient(to bottom, #c3ddfb, #f2f6fb);
   border: 1px solid #a2a6ab;
-  padding: 8px 1em 5px;
+  padding: 4px 1em 2px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   border-bottom-color: #f2f6fb;
@@ -1433,17 +1434,18 @@ img {
   align-items: center;
   justify-content: space-between;
   flex: 1;
+  max-width: 20em;
 }
 
 .ie_tabs .ie_tab_inactive {
   left: 13em;
   height: 26px;
   grid-column: 2;
-  margin-bottom: 0;
   align-self: end;
   margin-bottom: 5px;
   z-index: 9;
-  padding-top: 7px;
+  padding-top: 6px;
+  padding-bottom: 4px;
   background: #e3eefb;
 }
 
@@ -1453,9 +1455,23 @@ img {
 }
 
 .ie_closeTab {
+  color: #999;
+  font-size: 1.5em;
+  font-family: monospace;
+  font-weight: bold;
+  width: 1em;
   height: 1em;
-  color: #666;
-  font-size: 1.4em;
-  transform: translateY(-3px);
-  margin-left: 2em;
+  transform: translateX(7px);
+  border: 1px solid transparent;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2px;
+}
+
+.ie_closeTab:hover {
+  color: #b83c3d;
+  border-color: #a2a6ab;
+  background: linear-gradient(to bottom, #f8f8f8, #e0e0e3);
 }

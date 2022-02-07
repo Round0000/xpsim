@@ -22,11 +22,15 @@ appW.addEventListener("click", (e) => {
       .querySelector(".ie_tab:not(.ie_tab_inactive)")
       .classList.add("ie_tab_inactive");
     newTab.classList.add("ie_tab");
-    newTab.innerText = "New Tab";
+    newTab.innerHTML = `New Tab <button class="ie_closeTab">x</button>`;
     e.target.remove();
     appW.querySelector(".ie_tabs").append(newTab);
     const newTabTab = document.createElement("LI");
     newTabTab.classList.add("ie_tab", "ie_tab_inactive", "ie_tab_new");
     appW.querySelector(".ie_tabs").append(newTabTab);
+  }
+
+  if (e.target.classList.contains("ie_closeTab")) {
+    e.target.parentElement.remove();
   }
 });
