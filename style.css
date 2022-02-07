@@ -475,6 +475,7 @@ img {
   padding: 4px 3px 0px;
   user-select: none;
   filter: brightness(140%) contrast(70%);
+  flex-shrink: 0;
 }
 
 .appWindow.activeWindow {
@@ -1137,26 +1138,33 @@ img {
 .ie_nav_buttons button {
   width: 32px;
   height: 32px;
-  background-size: 100% !important;
 }
 
-.ie_back:disabled {
-  background: url(./assets/icons/ie/navbuttons/b0.png);
+.ie_nav_buttons button img {
+  display: none;
 }
-.ie_back {
-  background: url(./assets/icons/ie/navbuttons/b1.png);
+
+.ie_nav_buttons button:disabled img:nth-of-type(1) {
+  display: block;
 }
-.ie_back:enabled:hover {
-  background: url(./assets/icons/ie/navbuttons/b2.png);
+.ie_nav_buttons button:enabled:not(:hover) img:nth-of-type(2) {
+  display: block;
 }
-.ie_forward:disabled {
-  background: url(./assets/icons/ie/navbuttons/f0.png);
+.ie_nav_buttons button:enabled:hover img:nth-of-type(3) {
+  display: block;
 }
-.ie_forward {
-  background: url(./assets/icons/ie/navbuttons/f1.png);
+
+.ie_urlform {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-right: 4px;
 }
-.ie_forward:enabled:hover {
-  background: url(./assets/icons/ie/navbuttons/f2.png);
+
+.ie_urlform button {
+  height: 20px;
+  margin-left: -18px;
+  flex-shrink: 0;
 }
 
 .ie_urlbar {
@@ -1168,6 +1176,7 @@ img {
   height: 1.5em;
   align-self: center;
   background-color: white;
+  padding-right: 22px;
 }
 
 .ie_frame {
@@ -1175,7 +1184,6 @@ img {
   height: 100%;
   width: 100%;
   overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 .ie_frame iframe {
@@ -1193,6 +1201,7 @@ img {
   display: grid;
   grid-template-columns: auto 1fr;
   font-family: "Segoe UI", "Verdana", "Arial", sans-serif;
+  overflow-x: hidden;
 }
 
 .ie_noconnectpage img {
@@ -1322,6 +1331,10 @@ img {
   margin-left: 4px;
 }
 
+.ie_refresh {
+  margin-left: 18px;
+}
+
 .ie_refresh img:last-of-type,
 .ie_stop img:last-of-type {
   display: none;
@@ -1350,4 +1363,5 @@ img {
   background-size: 14px;
   background-position: 4px 42%;
   padding-left: 24px;
+  max-width: 10em;
 }

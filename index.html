@@ -105,15 +105,27 @@
           <div class="ie_topbar">
             <div class="ie_topbar_a">
               <div class="ie_nav_buttons">
-                <button class="ie_back"></button>
-                <button class="ie_forward"></button>
+                <button class="ie_back">
+                  <img src="./assets/icons/ie/navbuttons/b0.png" alt="">
+                  <img src="./assets/icons/ie/navbuttons/b1.png" alt="">
+                  <img src="./assets/icons/ie/navbuttons/b2.png" alt="">
+                </button>
+                
+                <button class="ie_forward" disabled>
+                  <img src="./assets/icons/ie/navbuttons/f0.png" alt="">
+                  <img src="./assets/icons/ie/navbuttons/f1.png" alt="">
+                  <img src="./assets/icons/ie/navbuttons/f2.png" alt="">
+                </button>
               </div>
-              <input type="text" spellcheck="false" class="ie_urlbar" value="http://127.0.0.1:5500/index.html"></input>
+              <form class="ie_urlform">
+                <input type="text" spellcheck="false" class="ie_urlbar" value="http://127.0.0.1:5500/index.html"></input>
+                <button><img src="./assets/icons/ie/navbuttons/urlarr1.png" alt=""></button>
+              </form>
               <button class="ie_refresh"><img src="./assets/icons/ie/navbuttons/r1.png" alt=""><img
                   src="./assets/icons/ie/navbuttons/r2.png" alt=""></button>
               <button class="ie_stop"><img src="./assets/icons/ie/navbuttons/s1.png" alt=""><img
                   src="./assets/icons/ie/navbuttons/s2.png" alt=""></button>
-              <input class="ie_searchbar"></input>
+              <input class="ie_searchbar" placeholder="Google"></input>
               <button class="ie_searchbutton"></button>
             </div>
             <div class="ie_topbar_b">
@@ -368,6 +380,7 @@
   <script src="templates.js"></script>
   <script src="app.js"></script>
   <script src="./apps/wmp.js"></script>
+  <script src="./apps/internetexplorer.js"></script>
 </body>
 
 </html>
