@@ -1,0 +1,98 @@
+.appWindow[data-app="calculator"] {
+    width: max-content;
+    height: max-content;
+    min-width: max-content;
+    min-height: max-content;
+  }
+  
+  .appWindow[data-app="calculator"] .appContent {
+    background-color: var(--clr-menuGray);
+    padding: 0.1em 0.8em;
+  }
+  
+  .calc_result {
+    background-color: white;
+    border: 1px solid #222;
+    padding: 0.2em 0.5em 0.5em;
+    text-align: right;
+    cursor: text;
+  }
+  
+  .calc_interface {
+    margin: 0.8em 0;
+    display: grid;
+    gap: 0.5em;
+    width: max-content;
+    grid-template-columns: repeat(2, auto);
+    color: blue;
+  }
+  
+  .calc_empty {
+    border: 1px solid white;
+    border-top: 0;
+    border-left: 0;
+    width: 65%;
+    margin-left: 10%;
+    align-self: center;
+    height: 85%;
+    box-shadow: inset 1px 1px 2px #0008, inset -1px -1px 1px #fff;
+  }
+  
+  .calc_interface button {
+    border: 1px solid #222;
+    padding: 0.3em 0.2em;
+    min-width: max-content;
+    background: linear-gradient(to bottom, #fff, #eee);
+    border: 2px solid transparent;
+    outline: 1px solid hsl(214, 70%, 30%);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    border-bottom: 2px solid #0001;
+  }
+  
+  .calc_interface button:hover {
+    background: linear-gradient(#fff, #eee),
+      linear-gradient(to top, orange, rgba(255, 166, 0, 0.185));
+    background-clip: padding-box, border-box;
+    background-size: cover;
+    background-origin: border-box;
+  }
+  
+  .calc_interface button:active {
+    background: #e0e0e0;
+    border-top-color: #ccc;
+    border-bottom-color: #eee;
+  }
+  
+  .calc_topline {
+    grid-column: 2 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: inherit;
+    margin-bottom: 0.3em;
+    color: red;
+  }
+  
+  .calc_topline button {
+    width: auto;
+  }
+  
+  .calc_leftline {
+    display: grid;
+    gap: inherit;
+    margin-right: 0.5em;
+    color: red;
+  }
+  
+  .calc_mainblock {
+    display: grid;
+    gap: inherit;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .calc_red {
+    color: red;
+  }

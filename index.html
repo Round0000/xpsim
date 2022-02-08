@@ -85,117 +85,14 @@
         <span>Recycle Bin</span>
       </button>
 
+      
+
       <!--  -->
       <!--  -->
       <!-- UI WORKSHOP -->
       <!--  -->
 
-      <div class="appWindow" data-app="internetexplorer">
-        <header class="appWindowHeader">
-          <img src="./assets/icons/wmp.ico" alt="" />
-          <p class="appTitle">Internet Explorer</p>
-          <div class="appWindowActions">
-            <button class="btnWindowMinimize"></button>
-            <button class="btnWindowMaximize"></button>
-            <button class="btnWindowClose"></button>
-          </div>
-        </header>
-
-        <div class="appContent">
-          <div class="ie_topbar">
-            <div class="ie_topbar_a">
-              <div class="ie_nav_buttons">
-                <button class="ie_back">
-                  <img src="./assets/icons/ie/navbuttons/b0.png" alt="">
-                  <img src="./assets/icons/ie/navbuttons/b1.png" alt="">
-                  <img src="./assets/icons/ie/navbuttons/b2.png" alt="">
-                </button>
-                
-                <button class="ie_forward" disabled>
-                  <img src="./assets/icons/ie/navbuttons/f0.png" alt="">
-                  <img src="./assets/icons/ie/navbuttons/f1.png" alt="">
-                  <img src="./assets/icons/ie/navbuttons/f2.png" alt="">
-                </button>
-              </div>
-              <form class="ie_urlform">
-                <input type="text" spellcheck="false" class="ie_urlbar" value="http://127.0.0.1:5500/index.html"></input>
-                <button><img src="./assets/icons/ie/navbuttons/urlarr1.png" alt=""></button>
-              </form>
-              <button class="ie_refresh"><img src="./assets/icons/ie/navbuttons/r1.png" alt=""><img
-                  src="./assets/icons/ie/navbuttons/r2.png" alt=""></button>
-              <button class="ie_stop"><img src="./assets/icons/ie/navbuttons/s1.png" alt=""><img
-                  src="./assets/icons/ie/navbuttons/s2.png" alt=""></button>
-              <input class="ie_searchbar" placeholder="Google"></input>
-              <button class="ie_searchbutton"></button>
-            </div>
-            <div class="ie_topbar_b">
-              <button class="ie_favs"><img src="./assets/icons/ie/fav.png" alt=""></button>
-              <ul class="ie_tabs">
-                <li class="ie_tab"><span>Blank Page</span>
-
-                <button class="ie_closeTab">x</button>
-                </li>
-                <li class="ie_tab ie_tab_inactive"><span>Inactive page</span>
-                  <button class="ie_closeTab">x</button>
-                </li>
-                
-                
-                <li class="ie_tab ie_tab_inactive ie_tab_new"></li>
-              </ul>
-            </div>
-          </div>
-          <div class="ie_frame">
-            <iframe class="dnone" src="" frameborder="0"></iframe>
-            <div class="ie_noconnectpage">
-              <img src="./assets/icons/ie/noConnect.png" alt="" />
-              <p>Internet Explorer cannot display the webpage</p>
-              <hr />
-              <span>What you can try:</span>
-              <button>Diagnose Connection Problems</button>
-              <details id="ie_moreinformation"><summary>More information</summary>
-                  <p>This problem can be caused by a variety of issues, including: </p>
-                  <ul>
-                    <li>Internet connectivity has been lost.</li>
-                    <li>The website is temporarily unavailable.
-                    </li>
-                    <li>The Domain Name Server (DNS) is not reachable.
-                    </li>
-                    <li>The Domain Name Server (DNS) does not have a listing for the website's domain.
-                    </li>
-                    <li>There might be a typing error in the address.
-                    </li>
-                    <li>If this is an HTTPS (secure) address, click Tools, click Internet Options, click Advanced, and
-                      check to be sure the SSL and TLS protocols are enabled under the security section.
-                    </li>
-                  </ul>
-                  <p><strong>For offline users
-
-                  </strong></p>
-                  <p>You can still view subscribed feeds and some recently viewed webpages.
-                  </p>
-                  <p>To view subscribed feeds
-
-                  </p>
-                  <ol>
-                    <li>Click the Favorites Center button <img src="./assets/icons/ie/fav.png" alt="">, click Feeds, and then click the feed you want to view.
-                    </li>
-                  </ol>
-                  <p>To view recently visited webpages (might not work on all pages)
-
-                  </p>
-                  <ol>
-                    <li>Click Tools <img src="./assets/icons/ie/tools.png" alt="">, and then click Work Offline.
-                    </li>
-                    <li>Click the Favorites Center button <img src="./assets/icons/ie/fav.png" alt="">, click History, and then click the page you want to view.
-                    </li>
-                  </ol>
-                </details>
-
-
-            </div>
-          </div>
-        </div>
-
+      
         <div id="WORKSHOP" class="dnone">
           <div class="appWindow" data-app="wmp">
             <header class="appWindowHeader">
@@ -252,122 +149,123 @@
         <!-- End of workshop -->
         <!--  -->
       </div>
+      <div id="taskbar">
+        <button id="startBtn">
+          <img src="./assets/images/windowslogo.png" alt="" />
+          <span>start</span>
+        </button>
+        <div id="taskbarShortcuts">
+          <button class="scutDesktop">
+            <img src="./assets/icons/desktop.ico" alt="" />
+          </button>
+        </div>
+        <div id="openedApps"></div>
+        <div id="sideIcons">
+          <p id="time">00:00</p>
+        </div>
+        <nav id="startMenu" class="dnone">
+          <header>
+            <div id="avatar">
+              <img src="./assets/images/avatar1.jpg" alt="" />
+            </div>
+            <p id="username">Lorem ipsum</p>
+          </header>
+          <div id="startMenuItems">
+            <div id="startMenuShortcutsL">
+              <ul>
+                <li>
+                  <img class="icon_regular" src="./assets/icons/ie.ico" alt="" />
+                  <div>
+                    <strong>Internet</strong><span>Internet Explorer</span>
+                  </div>
+                </li>
+                <li>
+                  <img class="icon_regular" src="./assets/icons/vrac/outlookexpress.png" alt="" />
+                  <div><strong>E-mail</strong><span>Outlook Express</span></div>
+                </li>
+                <hr />
+                <li>
+                  <img class="icon_regular" src="./assets/icons/wmp.ico" alt="" />
+                  Windows Media Player
+                </li>
+                <li>
+                  <img class="icon_regular" src="./assets/icons/mspaint.ico" alt="" />
+                  Paint
+                </li>
+                <li>
+                  <img class="icon_regular"
+                    src="https://auctioneertech.com/wp-content/uploads/2011/11/Windows_Easy_Transfer_Logo.png" alt="" />
+                  Files and Settings Transfer Wizard
+                </li>
+                <hr />
+                <li>
+                  <strong>All Programs</strong><img src="./assets/icons/allprograms.png" alt="" />
+                </li>
+              </ul>
+            </div>
+            <div id="startMenuShortcutsR">
+              <ul>
+                <li data-app="notepad">
+                  <img class="icon_small" src="./assets/icons/mydocuments.ico" alt="" />
+                  <strong>My Documents</strong>
+                </li>
+                <li>
+                  <img class="icon_small" src="./assets/icons/myrecentdocuments.ico" alt="" /><strong>My Recent
+                    Documents</strong> ⯈
+                </li>
+                <li>
+                  <img class="icon_small" src="./assets/icons/mypictures.ico" alt="" />
+                  <strong>My Pictures</strong>
+                </li>
+                <li>
+                  <img class="icon_small" src="./assets/icons/mymusic.ico" alt="" />
+                  <strong>My Music</strong>
+                </li>
+                <li>
+                  <img class="icon_small" src="./assets/icons/mycomputer.ico" alt="" />
+                  <strong>My Computer</strong>
+                </li>
+                <hr />
+                <li>
+                  <img class="icon_small" src="./assets/icons/controlpanel.ico" alt="" />
+                  Control Panel
+                </li>
+                <li>
+                  <img class="icon_small" src="./assets/icons/mydocuments.ico" alt="" />Set Program Access and Defaults
+                </li>
+                <li>
+                  <img class="icon_small" src="./assets/icons/printersandfaxes.ico" alt="" />Printers and Faxes
+                </li>
+                <hr />
+                <li>
+                  <img class="icon_small" src="./assets/icons/help.ico" alt="" />
+                  Help and Support
+                </li>
+                <li>
+                  <img class="icon_small" src="./assets/icons/search.ico" alt="" />Search
+                </li>
+                <li>
+                  <img class="icon_small" src="./assets/icons/run.ico" alt="" />Run...
+                </li>
+              </ul>
+            </div>
+          </div>
+          <footer>
+            <button id="logOffBtn">
+              <img class="icon_small" src="./assets/icons/logoff.ico" alt="" />
+              Log Off
+            </button>
+            <button id="turnOffBtn">
+              <img class="icon_small" src="./assets/icons/turnoff.ico" alt="" />
+              Turn Off Computer
+            </button>
+          </footer>
+        </nav>
+      </div>
     </div>
 
     <!-- Taskbar -->
-    <div id="taskbar">
-      <button id="startBtn">
-        <img src="./assets/images/windowslogo.png" alt="" />
-        <span>start</span>
-      </button>
-      <div id="taskbarShortcuts">
-        <button class="scutDesktop">
-          <img src="./assets/icons/desktop.ico" alt="" />
-        </button>
-      </div>
-      <div id="openedApps"></div>
-      <div id="sideIcons">
-        <p id="time">00:00</p>
-      </div>
-      <nav id="startMenu" class="dnone">
-        <header>
-          <div id="avatar">
-            <img src="./assets/images/avatar1.jpg" alt="" />
-          </div>
-          <p id="username">Lorem ipsum</p>
-        </header>
-        <div id="startMenuItems">
-          <div id="startMenuShortcutsL">
-            <ul>
-              <li>
-                <img class="icon_regular" src="./assets/icons/ie.ico" alt="" />
-                <div>
-                  <strong>Internet</strong><span>Internet Explorer</span>
-                </div>
-              </li>
-              <li>
-                <img class="icon_regular" src="./assets/icons/outlookexpress.png" alt="" />
-                <div><strong>E-mail</strong><span>Outlook Express</span></div>
-              </li>
-              <hr />
-              <li>
-                <img class="icon_regular" src="./assets/icons/wmp.ico" alt="" />
-                Windows Media Player
-              </li>
-              <li>
-                <img class="icon_regular" src="./assets/icons/mspaint.ico" alt="" />
-                Paint
-              </li>
-              <li>
-                <img class="icon_regular"
-                  src="https://auctioneertech.com/wp-content/uploads/2011/11/Windows_Easy_Transfer_Logo.png" alt="" />
-                Files and Settings Transfer Wizard
-              </li>
-              <hr />
-              <li>
-                <strong>All Programs</strong><img src="./assets/icons/allprograms.png" alt="" />
-              </li>
-            </ul>
-          </div>
-          <div id="startMenuShortcutsR">
-            <ul>
-              <li data-app="notepad">
-                <img class="icon_small" src="./assets/icons/mydocuments.ico" alt="" />
-                <strong>My Documents</strong>
-              </li>
-              <li>
-                <img class="icon_small" src="./assets/icons/myrecentdocuments.ico" alt="" /><strong>My Recent
-                  Documents</strong> ⯈
-              </li>
-              <li>
-                <img class="icon_small" src="./assets/icons/mypictures.ico" alt="" />
-                <strong>My Pictures</strong>
-              </li>
-              <li>
-                <img class="icon_small" src="./assets/icons/mymusic.ico" alt="" />
-                <strong>My Music</strong>
-              </li>
-              <li>
-                <img class="icon_small" src="./assets/icons/mycomputer.ico" alt="" />
-                <strong>My Computer</strong>
-              </li>
-              <hr />
-              <li>
-                <img class="icon_small" src="./assets/icons/controlpanel.ico" alt="" />
-                Control Panel
-              </li>
-              <li>
-                <img class="icon_small" src="./assets/icons/mydocuments.ico" alt="" />Set Program Access and Defaults
-              </li>
-              <li>
-                <img class="icon_small" src="./assets/icons/printersandfaxes.ico" alt="" />Printers and Faxes
-              </li>
-              <hr />
-              <li>
-                <img class="icon_small" src="./assets/icons/help.ico" alt="" />
-                Help and Support
-              </li>
-              <li>
-                <img class="icon_small" src="./assets/icons/search.ico" alt="" />Search
-              </li>
-              <li>
-                <img class="icon_small" src="./assets/icons/run.ico" alt="" />Run...
-              </li>
-            </ul>
-          </div>
-        </div>
-        <footer>
-          <button id="logOffBtn">
-            <img class="icon_small" src="./assets/icons/logoff.ico" alt="" />
-            Log Off
-          </button>
-          <button id="turnOffBtn">
-            <img class="icon_small" src="./assets/icons/turnoff.ico" alt="" />
-            Turn Off Computer
-          </button>
-        </footer>
-      </nav>
-    </div>
+    
 
     <!-- Contextual menu -->
     <div id="contextualMenu" class="invisible">
@@ -391,7 +289,6 @@
   <script src="templates.js"></script>
   <script src="app.js"></script>
   <script src="./apps/wmp.js"></script>
-  <script src="./apps/internetexplorer.js"></script>
 </body>
 
 </html>

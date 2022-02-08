@@ -1,3 +1,12 @@
+// Get random
+function getRandom(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+//
+
 startBtn.addEventListener("click", () => {
   startMenu.classList.toggle("dnone");
 });
@@ -21,14 +30,23 @@ document.addEventListener("click", (e) => {
 // Minimize/Maximize/Close window
 
 document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("btnWindowMaximize") || e.target.classList.contains("btnWindowRestore")) {
+  if (
+    e.target.classList.contains("btnWindowMaximize") ||
+    e.target.classList.contains("btnWindowRestore")
+  ) {
     e.target.closest(".appWindow").classList.toggle("maximized");
-    e.target.parentElement.querySelector('.btnWindowMaximize').classList.toggle("dnone");
-    e.target.parentElement.querySelector('.btnWindowRestore').classList.toggle("dnone");
+    e.target.parentElement
+      .querySelector(".btnWindowMaximize")
+      .classList.toggle("dnone");
+    e.target.parentElement
+      .querySelector(".btnWindowRestore")
+      .classList.toggle("dnone");
   }
   if (e.target.classList.contains("btnWindowClose")) {
     const app = e.target.closest(".appWindow");
-    app.classList.add("dnone");
+    document.querySelector("." + app.dataset.app + "_script").remove();
+    document.querySelector("." + app.dataset.app + "_style").remove();
+    app.remove();
     taskbar
       .querySelector(`.openedAppTab[data-app="${app.dataset.app}"]`)
       .remove();
@@ -184,7 +202,10 @@ function openApp(app, title) {
 
   newApp.querySelector(".appContent").innerHTML = a.html;
 
-  desktop.append(newApp);
+  newApp.style.top = getRandom(1, 30) + "vh";
+  newApp.style.left = getRandom(1, 30) + "vw";
+
+  
 
   newApp.addEventListener("click", (e) => {
     setActiveWindow(newApp);
@@ -197,6 +218,22 @@ function openApp(app, title) {
   openedApps.append(newTab);
 
   setActiveWindow(newApp);
+
+  const scriptImport = document.createElement("SCRIPT");
+  scriptImport.src = "./apps/" + a.dataid + ".js";
+  scriptImport.classList.add(a.dataid + "_script");
+  const cssImport = document.createElement("LINK");
+  cssImport.rel = "stylesheet";
+  cssImport.href = "./apps/" + a.dataid + ".css";
+  cssImport.classList.add(a.dataid + "_style");
+  document.body.append(cssImport);
+
+  document.body.style.cursor = "wait";
+  setTimeout(() => {
+    desktop.append(newApp);
+    document.body.style.cursor = "initial";
+    document.body.append(scriptImport);
+  }, getRandom(200, 500));
 }
 
 // Internal clock
@@ -228,4 +265,3 @@ setInterval(() => {
 // openApp("notepad");
 
 // App Menu context
-
