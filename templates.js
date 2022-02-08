@@ -360,7 +360,56 @@ const apps = {
     icon: "./assets/icons/fileexplorer.ico",
     maximize: false,
     html: `
+    
+    
+    <ul class="appMenu dnone">
+    </ul>
+    <div class="appContent">
+      <ul class="app_tabs">
+        <li>Themes</li>
+        <li class="active">Desktop</li>
+        <li>Screen Saver</li>
+        <li>Appearance</li>
+        <li>Settings</li>
+      </ul>
+      <div class="app_content">
+        <div class="disp_desktop">
+          <div class="disp_monitor">
+            <img src="./assets/images/displaypropmonitor.png" alt="">
+          </div>
+          <p>Background:</p>
+          <div class="disp_bg_options">
+            <ul>
+              <li>(None)</li>
+              <li>bliss</li>
+            </ul>
+            <div class="disp_bg_options_inputs">
+              <button>Browse...</button>
+              <label>
+                Position:
+                <select>
+                  <option value="stretch">Center</option>
+                  <option value="stretch">Tile</option>
+                  <option value="stretch">Stretch</option>
+                </select>
+              </label>
+              <label>
+                Color:
+                <input type="color">
+              </label>
+            </div>
+          </div>
+          <button>Customize Desktop...</button>
+        </div>
+      </div>
+      <div class="app_actions">
+        <button>OK</button>
+        <button>Cancel</button>
+        <button>Apply</button>
+      </div>
 
+
+    </div>
     `,
   },
 };

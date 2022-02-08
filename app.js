@@ -127,12 +127,12 @@ function dragndrop(el, e) {
 //   }, 100);
 // });
 
-// document.addEventListener("dblclick", (e) => {
-//   const t = e.target.parentElement;
-//   if (t.classList.contains("appIcon")) {
-//     openApp(t.dataset.app, t.dataset.apptitle);
-//   }
-// });
+document.addEventListener("dblclick", (e) => {
+  const t = e.target.parentElement;
+  if (t.classList.contains("appIcon")) {
+    openApp(t.dataset.app, t.dataset.apptitle);
+  }
+});
 
 // Switch active window
 
@@ -160,6 +160,8 @@ document.querySelector(".scutDesktop").addEventListener("click", (e) => {
 });
 
 function openApp(app, title) {
+
+  
   const a = apps[app];
 
   const newApp = document.createElement("DIV");
@@ -262,7 +264,7 @@ setInterval(() => {
 //
 // openApp("displayproperties");
 
-// App Menu context
+// Context menu
 
 desktop.addEventListener("contextmenu", (e) => {
   e.preventDefault();
@@ -293,3 +295,7 @@ contextMenu.addEventListener("click", (e) => {
     openApp("displayproperties");
   }
 });
+
+document.addEventListener('click', e => {
+  contextMenu.classList.add("invisible");
+})
