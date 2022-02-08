@@ -4,7 +4,7 @@ const appDisProp = document.querySelector(
 
 console.log(appDisProp);
 
-appDisProp.addEventListener("click", (e) => {
+appDisProp.querySelector('.app_tabs').addEventListener("click", (e) => {
   if (e.target.tagName === "LI") {
     appDisProp.querySelector(".active").classList.remove("active");
 
