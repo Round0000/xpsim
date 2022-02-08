@@ -60,3 +60,70 @@
     width: 164px;
     margin: 20px auto;
 }
+
+.disp_desktop {
+    padding: 16px;
+    background-color: #eee;
+    box-shadow: 2px 2px 2px #0003;
+}
+
+.disp_bg_options {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 32px;
+    margin-bottom: 8px;
+    
+}
+
+
+.disp_desktop p {
+    margin-bottom: 6px;
+}
+
+.disp_desktop ul {
+    background-color: #fff;
+    border: 1px solid rgb(86, 111, 250);
+    padding: 1px 6px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    margin-right: 12px;
+    min-width: 24em;
+}
+
+.disp_desktop button,
+.disp_desktop input {
+    display: block;
+    grid-column: 2;
+    align-self: start;
+}
+
+.appWindow[data-app="displayproperties"] button {
+    padding: 0.1em 1em;
+    border: 2px solid transparent;
+    outline: 1px solid hsl(214, 70%, 30%);
+    border-radius: 3px;
+    border-bottom: 2px solid #0001;
+    width: max-content;
+    margin-bottom: 1.5em;
+}
+
+.appWindow[data-app="displayproperties"] button:hover {
+    background: linear-gradient(#fff, #eee),
+      linear-gradient(to top, orange, rgba(255, 166, 0, 0.3));
+      background-clip: padding-box, border-box;
+      background-size: cover;
+      background-origin: border-box;
+}
+
+.appWindow[data-app="displayproperties"] .app_actions {
+    padding: 8px;
+    margin-left: auto;
+    width: max-content;
+    display: flex;
+}
+
+.appWindow[data-app="displayproperties"] .app_actions button {
+    margin-left: 1em;
+    width: 4em;
+    text-align: center;
+}
