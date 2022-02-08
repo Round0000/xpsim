@@ -587,7 +587,7 @@ img {
 
 
 /* Contextual menu */
-#contextualMenu {
+#contextMenu {
   position: fixed;
   border: 1px solid #999;
   background-color: white;
@@ -600,19 +600,19 @@ img {
   transition: opacity 0.3s;
 }
 
-#contextualMenu hr {
+#contextMenu hr {
   border: none;
   border-top: 1px solid #ccc;
   width: 100%;
   margin: 0.25em 0;
 }
 
-#contextualMenu li {
+#contextMenu li {
   padding: 0.2em 1em;
   padding-right: 2em;
 }
 
-#contextualMenu li:hover {
+#contextMenu li:hover {
   background-color: hsl(214, 89%, 42%);
   color: white;
 }
@@ -844,4 +844,6 @@ img {
   z-index: 999;
   /* display: none; */
 }
+
+
 

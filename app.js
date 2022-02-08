@@ -111,28 +111,28 @@ function dragndrop(el, e) {
 
 // Right click
 
-document.addEventListener("contextmenu", (e) => {
-  e.preventDefault();
+// document.addEventListener("contextmenu", (e) => {
+//   e.preventDefault();
 
-  contextualMenu.style.left = e.x + "px";
-  contextualMenu.style.top = e.y + "px";
-  setTimeout(() => {
-    contextualMenu.classList.remove("invisible");
-  }, 100);
-});
+//   contextualMenu.style.left = e.x + "px";
+//   contextualMenu.style.top = e.y + "px";
+//   setTimeout(() => {
+//     contextualMenu.classList.remove("invisible");
+//   }, 100);
+// });
 
-document.addEventListener("click", (e) => {
-  setTimeout(() => {
-    contextualMenu.classList.add("invisible");
-  }, 100);
-});
+// document.addEventListener("click", (e) => {
+//   setTimeout(() => {
+//     contextualMenu.classList.add("invisible");
+//   }, 100);
+// });
 
-document.addEventListener("dblclick", (e) => {
-  const t = e.target.parentElement;
-  if (t.classList.contains("appIcon")) {
-    openApp(t.dataset.app, t.dataset.apptitle);
-  }
-});
+// document.addEventListener("dblclick", (e) => {
+//   const t = e.target.parentElement;
+//   if (t.classList.contains("appIcon")) {
+//     openApp(t.dataset.app, t.dataset.apptitle);
+//   }
+// });
 
 // Switch active window
 
@@ -205,8 +205,6 @@ function openApp(app, title) {
   newApp.style.top = getRandom(1, 30) + "vh";
   newApp.style.left = getRandom(1, 30) + "vw";
 
-  
-
   newApp.addEventListener("click", (e) => {
     setActiveWindow(newApp);
   });
@@ -265,3 +263,33 @@ setInterval(() => {
 // openApp("notepad");
 
 // App Menu context
+
+desktop.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+
+  const contextMenuList = contextMenu.querySelector("ul");
+
+  contextMenuList.innerHTML = "";
+
+  contextMenus.desktop.forEach((el) => {
+    if (el === "") {
+      const hr = document.createElement("HR");
+      contextMenuList.append(hr);
+    } else {
+      const li = document.createElement("li");
+      li.innerText = el;
+      contextMenuList.append(li);
+    }
+  });
+
+  contextMenu.style.left = e.x + "px";
+  contextMenu.style.top = e.y + "px";
+
+  contextMenu.classList.remove("invisible");
+});
+
+contextMenu.addEventListener("click", (e) => {
+  if (e.target.innerText === "Properties") {
+    openApp("displayproperties");
+  }
+});

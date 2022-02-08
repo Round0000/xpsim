@@ -1,0 +1,4 @@
+.appWindow[data-app="displayproperties"] {
+    width: max-content;
+    height: max-content;
+}

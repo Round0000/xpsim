@@ -353,4 +353,30 @@ const apps = {
           </div>
     `,
   },
+  displayproperties: {
+    dataid: "displayproperties",
+    title: "Display Properties",
+    menu: false,
+    icon: "./assets/icons/fileexplorer.ico",
+    maximize: false,
+    html: `
+    <textarea class="notepadTextarea" spellcheck="false"></textarea>
+    `,
+  },
+};
+
+const contextMenus = {
+  desktop: [
+    "Arrange Icons By",
+    "Refresh",
+    "",
+    "Paste",
+    "Paste Shortcut",
+    "Undo",
+    "Open Command Prompt",
+    "",
+    "New",
+    "",
+    "Properties",
+  ],
 };
