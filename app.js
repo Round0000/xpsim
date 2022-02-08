@@ -231,7 +231,7 @@ function openApp(app, title) {
     desktop.append(newApp);
     document.body.style.cursor = "initial";
     document.body.append(scriptImport);
-  }, getRandom(200, 500));
+  }, getRandom(0, 0));
 }
 
 // Internal clock
@@ -260,7 +260,7 @@ setInterval(() => {
 //
 //
 //
-// openApp("notepad");
+// openApp("displayproperties");
 
 // App Menu context
 

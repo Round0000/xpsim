@@ -267,7 +267,7 @@ const apps = {
                   <img src="./assets/icons/ie/navbuttons/b1.png" alt="">
                   <img src="./assets/icons/ie/navbuttons/b2.png" alt="">
                 </button>
-                
+
                 <button class="ie_forward" disabled>
                   <img src="./assets/icons/ie/navbuttons/f0.png" alt="">
                   <img src="./assets/icons/ie/navbuttons/f1.png" alt="">
@@ -295,8 +295,8 @@ const apps = {
                 <li class="ie_tab ie_tab_inactive"><span>Inactive page</span>
                   <button class="ie_closeTab">x</button>
                 </li>
-                
-                
+
+
                 <li class="ie_tab ie_tab_inactive ie_tab_new"></li>
               </ul>
             </div>
@@ -360,7 +360,7 @@ const apps = {
     icon: "./assets/icons/fileexplorer.ico",
     maximize: false,
     html: `
-    <textarea class="notepadTextarea" spellcheck="false"></textarea>
+
     `,
   },
 };
